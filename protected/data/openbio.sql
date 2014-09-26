@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-09-2014 a las 02:33:05
+-- Tiempo de generación: 26-09-2014 a las 17:55:25
 -- Versión del servidor: 5.6.17
 -- Versión de PHP: 5.5.12
 
@@ -30,7 +30,15 @@ CREATE TABLE IF NOT EXISTS `categoria` (
   `idCategoria` int(11) NOT NULL AUTO_INCREMENT,
   `NombreCategoria` varchar(30) NOT NULL,
   PRIMARY KEY (`idCategoria`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Volcado de datos para la tabla `categoria`
+--
+
+INSERT INTO `categoria` (`idCategoria`, `NombreCategoria`) VALUES
+(1, 'Categoria 1'),
+(2, 'Categoria 2');
 
 -- --------------------------------------------------------
 
@@ -123,7 +131,7 @@ CREATE TABLE IF NOT EXISTS `modulo` (
 INSERT INTO `modulo` (`idModulo`, `NombreModulo`, `Url`, `Estado`) VALUES
 (1, 'Información Personal', '#', b'1'),
 (2, 'Vitrina', 'usuario/adminvitrina', b'1'),
-(4, 'Producto', '#', b'1'),
+(4, 'Producto', 'productos/index', b'1'),
 (5, 'Agenda', '#', b'1'),
 (6, 'Inicio', 'app/index', b'1');
 
@@ -172,7 +180,16 @@ CREATE TABLE IF NOT EXISTS `productos` (
   PRIMARY KEY (`idProductos`),
   KEY `fk_Productos_Vitrina1_idx` (`Vitrina_idVitrina`),
   KEY `fk_Productos_Categoria1_idx` (`Categoria_idCategoria`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+--
+-- Volcado de datos para la tabla `productos`
+--
+
+INSERT INTO `productos` (`idProductos`, `Foto`, `NombreProducto`, `FichaTecnica`, `Vitrina_idVitrina`, `Categoria_idCategoria`) VALUES
+(1, 'prueba.jpg', 'Prueba', 'poreuab jdfojosd sdkfbisd ksdfnksd', 3, 1),
+(5, 'preee.jpg', 'Preee', 'Bio', 3, 1),
+(6, 'prueba.jpg', 'Prueba', 'kdfhiksd', 5, 2);
 
 -- --------------------------------------------------------
 
@@ -230,20 +247,21 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `Clave` varchar(60) NOT NULL,
   PRIMARY KEY (`idUsuario`),
   KEY `fk_Usuario_Rol1_idx` (`Rol_idRol`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
 INSERT INTO `usuario` (`idUsuario`, `Foto`, `Nombre`, `Apellido`, `NombreEmpresa`, `Email`, `Celular`, `Direccion`, `Rol_idRol`, `Usuario`, `Clave`) VALUES
-(1, '2.jpg', 'Jader', 'Rojas', 'branswitch', 'jader.sexy', '2342134', 'odjo', 1, '123', '123'),
+(1, '2.jpg', 'Jader', 'Rojas', 'branswitch', 'jader.sexy', '2342134', 'odjo', 2, '123', '123'),
 (2, '#', 'Andres Felipe', 'GOmez', 'hanoit', 'hanoit.sas@gmail.com', '32423432', 'sdfsdf d33', 2, 'hanoit', 'hanoit'),
 (3, '#', 'juan', 'david', '', 'fdhi', '24', '', 1, '123456', '123456'),
 (4, '4.jpg', 'jimy', 'andres', '', 'hot@mm', '3242', '', 1, '000', '000'),
 (5, '5.jpg', 'kdsfhik', 'ihjfvih', 'ihvih', 'ihvis', '34', 'FIHVI', 1, '888', '888'),
 (6, '6.jpg', 'osdfjosdfj', 'jfvodsjo', 'ojfvosdj', 'ojfvosdj', '4332', 'ksd', 1, 'iknvidsn', 'invisnis'),
-(7, '7.jpg', 'osdfjosdfj', 'jfvodsjo', 'ojfvosdj', 'ojfvosdj', '4332', 'ksd', 2, 'iknvidsn', 'invisnis');
+(7, '7.jpg', 'osdfjosdfj', 'jfvodsjo', 'ojfvosdj', 'ojfvosdj', '4332', 'ksd', 1, 'iknvidsn', 'invisnis'),
+(8, '8.jpg', 'Prueba', 'Prueba', '', 'prueba@gmail.com', '342332', '32423', 1, 'prueba', 'preuba');
 
 -- --------------------------------------------------------
 
@@ -258,7 +276,7 @@ CREATE TABLE IF NOT EXISTS `usuariointeres` (
   PRIMARY KEY (`idUsuarioInteres`),
   KEY `fk_UsuarioInteres_Interes1_idx` (`Interes_idInteres`),
   KEY `fk_UsuarioInteres_Usuario1_idx` (`Usuario_idUsuario`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Volcado de datos para la tabla `usuariointeres`
@@ -267,7 +285,8 @@ CREATE TABLE IF NOT EXISTS `usuariointeres` (
 INSERT INTO `usuariointeres` (`idUsuarioInteres`, `Interes_idInteres`, `Usuario_idUsuario`) VALUES
 (1, 1, 7),
 (2, 3, 7),
-(3, 5, 7);
+(3, 5, 7),
+(4, 1, 8);
 
 -- --------------------------------------------------------
 
@@ -283,7 +302,7 @@ CREATE TABLE IF NOT EXISTS `vitrina` (
   `NumProductos` int(11) NOT NULL DEFAULT '2',
   PRIMARY KEY (`idVitrina`),
   KEY `fk_Vitrina_Usuario1_idx` (`Usuario_idUsuario`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Volcado de datos para la tabla `vitrina`
@@ -292,8 +311,9 @@ CREATE TABLE IF NOT EXISTS `vitrina` (
 INSERT INTO `vitrina` (`idVitrina`, `FechaCreacion`, `Estado`, `Usuario_idUsuario`, `NumProductos`) VALUES
 (1, '2014-09-19 00:25:11', b'0', 4, 2),
 (2, '2014-09-19 00:26:34', b'0', 3, 2),
-(3, '2014-09-19 00:27:11', b'0', 1, 2),
-(4, '2014-09-19 00:31:39', b'1', 7, 2);
+(3, '2014-09-19 00:27:11', b'1', 1, 2),
+(4, '2014-09-19 00:31:39', b'0', 7, 2),
+(5, '2014-09-25 22:54:24', b'1', 2, 2);
 
 --
 -- Restricciones para tablas volcadas
@@ -303,9 +323,9 @@ INSERT INTO `vitrina` (`idVitrina`, `FechaCreacion`, `Estado`, `Usuario_idUsuari
 -- Filtros para la tabla `itemevento`
 --
 ALTER TABLE `itemevento`
-  ADD CONSTRAINT `itemevento_ibfk_1` FOREIGN KEY (`Vitrina_idVitrina`) REFERENCES `vitrina` (`idVitrina`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_ItemEvento_EstadoEvento1` FOREIGN KEY (`EstadoEvento_idEstadoEvento`) REFERENCES `estadoevento` (`idEstadoEvento`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `fk_ItemEvento_Evento1` FOREIGN KEY (`Evento_idEvento`) REFERENCES `evento` (`idEvento`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_ItemEvento_Evento1` FOREIGN KEY (`Evento_idEvento`) REFERENCES `evento` (`idEvento`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `itemevento_ibfk_1` FOREIGN KEY (`Vitrina_idVitrina`) REFERENCES `vitrina` (`idVitrina`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `modulorol`
@@ -318,8 +338,8 @@ ALTER TABLE `modulorol`
 -- Filtros para la tabla `productos`
 --
 ALTER TABLE `productos`
-  ADD CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`Vitrina_idVitrina`) REFERENCES `vitrina` (`idVitrina`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `fk_Productos_Categoria1` FOREIGN KEY (`Categoria_idCategoria`) REFERENCES `categoria` (`idCategoria`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_Productos_Categoria1` FOREIGN KEY (`Categoria_idCategoria`) REFERENCES `categoria` (`idCategoria`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`Vitrina_idVitrina`) REFERENCES `vitrina` (`idVitrina`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `reserva`
