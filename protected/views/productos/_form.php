@@ -21,13 +21,13 @@
 			<div class="col-md-7">
 				<div class="form-group">
 					<?php echo $form->labelEx($model,'NombreProducto'); ?>
-					<?php echo $form->textField($model,'NombreProducto',array('id'=>'txtNombre','size'=>60,'maxlength'=>60,'class'=>'form-control')); ?>
+					<?php echo $form->textField($model,'NombreProducto',array('id'=>'txtNombre','size'=>60,'maxlength'=>60,'class'=>'form-control','data-parsley-required'=>'true')); ?>
 					<?php echo $form->error($model,'NombreProducto'); ?>
 				</div>
 
 				<div class="form-group">
 					<?php echo $form->labelEx($model,'Categoria_idCategoria'); ?>
-					<?php echo $form->dropDownList($model,"Categoria_idCategoria",CHtml::listData(Categoria::model()->findAll(), 'idCategoria', 'NombreCategoria'), array('empty' => 'Seleccionar','id'=>'ddlCategoria', 'class'=>'form-control'));?>
+					<?php echo $form->dropDownList($model,"Categoria_idCategoria",CHtml::listData(Categoria::model()->findAll(), 'idCategoria', 'NombreCategoria'), array('empty' => 'Seleccionar','id'=>'ddlCategoria', 'class'=>'form-control', 'data-parsley-required'=>'true'));?>
 					<?php echo $form->error($model,'Categoria_idCategoria'); ?>
 				</div>
 			</div>

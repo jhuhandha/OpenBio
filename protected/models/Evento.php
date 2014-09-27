@@ -1,28 +1,25 @@
 <?php
 
 /**
- * This is the model class for table "productos".
+ * This is the model class for table "evento".
  *
- * The followings are the available columns in table 'productos':
- * @property integer $idProductos
- * @property string $Foto
- * @property string $NombreProducto
- * @property string $FichaTecnica
- * @property integer $Vitrina_idVitrina
- * @property integer $Categoria_idCategoria
- *
- * The followings are the available model relations:
- * @property Categoria $categoriaIdCategoria
- * @property Vitrina $vitrinaIdVitrina
+ * The followings are the available columns in table 'evento':
+ * @property integer $idEvento
+ * @property string $NombreEvento
+ * @property string $FechaEvento
+ * @property integer $Intervalo
+ * @property string $HoraInicio
+ * @property string $HoraFinal
+ * @property integer $Estado
  */
-class Productos extends CActiveRecord
+class Evento extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'productos';
+		return 'evento';
 	}
 
 	/**
@@ -33,13 +30,12 @@ class Productos extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('NombreProducto, FichaTecnica, Vitrina_idVitrina, Categoria_idCategoria', 'required'),
-			array('Vitrina_idVitrina, Categoria_idCategoria', 'numerical', 'integerOnly'=>true),
-			array('Foto', 'length', 'max'=>80),
-			array('NombreProducto', 'length', 'max'=>60),
+			array('NombreEvento, FechaEvento, Intervalo, HoraInicio, HoraFinal, Estado', 'required'),
+			array('Intervalo, Estado', 'numerical', 'integerOnly'=>true),
+			array('NombreEvento', 'length', 'max'=>40),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idProductos, Foto, NombreProducto, FichaTecnica, Vitrina_idVitrina, Categoria_idCategoria', 'safe', 'on'=>'search'),
+			array('idEvento, NombreEvento, FechaEvento, Intervalo, HoraInicio, HoraFinal, Estado', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -51,8 +47,6 @@ class Productos extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'categoriaIdCategoria' => array(self::BELONGS_TO, 'Categoria', 'Categoria_idCategoria'),
-			'vitrinaIdVitrina' => array(self::BELONGS_TO, 'Vitrina', 'Vitrina_idVitrina'),
 		);
 	}
 
@@ -62,12 +56,13 @@ class Productos extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idProductos' => 'Id Productos',
-			'Foto' => 'Foto',
-			'NombreProducto' => 'Nombre Producto',
-			'FichaTecnica' => 'Ficha Tecnica',
-			'Vitrina_idVitrina' => 'Vitrina',
-			'Categoria_idCategoria' => 'Categoria',
+			'idEvento' => 'Id Evento',
+			'NombreEvento' => 'Nombre Evento',
+			'FechaEvento' => 'Fecha Evento',
+			'Intervalo' => 'Intervalo',
+			'HoraInicio' => 'Hora Inicio',
+			'HoraFinal' => 'Hora Final',
+			'Estado' => 'Estado',
 		);
 	}
 
@@ -89,12 +84,13 @@ class Productos extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('idProductos',$this->idProductos);
-		$criteria->compare('Foto',$this->Foto,true);
-		$criteria->compare('NombreProducto',$this->NombreProducto,true);
-		$criteria->compare('FichaTecnica',$this->FichaTecnica,true);
-		$criteria->compare('Vitrina_idVitrina',$this->Vitrina_idVitrina);
-		$criteria->compare('Categoria_idCategoria',$this->Categoria_idCategoria);
+		$criteria->compare('idEvento',$this->idEvento);
+		$criteria->compare('NombreEvento',$this->NombreEvento,true);
+		$criteria->compare('FechaEvento',$this->FechaEvento,true);
+		$criteria->compare('Intervalo',$this->Intervalo);
+		$criteria->compare('HoraInicio',$this->HoraInicio,true);
+		$criteria->compare('HoraFinal',$this->HoraFinal,true);
+		$criteria->compare('Estado',$this->Estado);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -105,7 +101,7 @@ class Productos extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Productos the static model class
+	 * @return Evento the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

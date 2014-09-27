@@ -159,7 +159,7 @@ class UsuarioController extends Controller
 			$a = array();
 			foreach ($model as $key => $value) {
 				$a[] = array(
-					'idUsuario'=>$value->idUsuario,
+					'idUsuario'=>$this->encrypt($value->idUsuario),
 					'Nombre'=>$value->Nombre,
 					'Apellido'=>$value->Apellido,
 					'Email'=>$value->Email,
@@ -175,24 +175,24 @@ class UsuarioController extends Controller
 	public function actionCambiarRol(){
 		try{
 			$bandera = false;
-			$vitrina = Vitrina::model()->find("Usuario_idUsuario = ".$_POST["id"]);
+			$vitrina = Vitrina::model()->find("Usuario_idUsuario = ".$this->decrypt($_POST["id"]));
 
 			if($_POST["rol"] == "2"){
 				if($vitrina == null){
 					$v = new Vitrina;
-					$v->Usuario_idUsuario = $_POST["id"];
+					$v->Usuario_idUsuario = $this->decrypt($_POST["id"]);
 					if($v->save()){
 						$bandera = true;
 					}
 				}else {
-					$vm=Vitrina::model()->find("Usuario_idUsuario = ".$_POST["id"]);
+					$vm=Vitrina::model()->find("Usuario_idUsuario = ".$this->decrypt($_POST["id"]));
 					$vm->Estado = 1;
 					if($vm->save()){
 						$bandera = true;
 					}
 				}
 			}else if($_POST["rol"] == "1"){
-				$vm=Vitrina::model()->find("Usuario_idUsuario = ".$_POST["id"]);
+				$vm=Vitrina::model()->find("Usuario_idUsuario = ".$this->decrypt($_POST["id"]));
 				$vm->Estado = 0;
 				if($vm->save()){
 					$bandera = true;
@@ -200,7 +200,7 @@ class UsuarioController extends Controller
 			}
 
 			if($bandera){
-				$model=$this->loadModel($_POST["id"]);
+				$model=$this->loadModel($this->decrypt($_POST["id"]));
 				$model->Rol_idRol = $_POST["rol"];
 				if($model->save()){
 					echo "1";

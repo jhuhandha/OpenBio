@@ -72,28 +72,33 @@ class ProductosController extends Controller
 
 					$nombre =  strtolower(trim($_POST["Productos"]['NombreProducto'])).".".$extension;
 					$imagen = false;
-
-
-					if ((($_FILES["Productos"]["type"]["Foto"] == "image/gif")
-					|| ($_FILES["Productos"]["type"]["Foto"] == "image/jpeg")
-					|| ($_FILES["Productos"]["type"]["Foto"] == "image/jpg")
-					|| ($_FILES["Productos"]["type"]["Foto"] == "image/pjpeg")
-					|| ($_FILES["Productos"]["type"]["Foto"] == "image/x-png")
-					|| ($_FILES["Productos"]["type"]["Foto"] == "image/png"))
-					&& in_array($extension, $allowedExts)) {
-		  				if ($_FILES["Productos"]["error"]["Foto"] > 0) {
-		    				echo "Return Code: " . $_FILES["Productos"]["error"]["Foto"] . "<br>";
-		  				} else {
-						    if (!file_exists(Yii::app()->request->baseUrl."/assets/upload/productos/" . $_FILES["Productos"]["name"]["Foto"])) {
-							    move_uploaded_file($_FILES["Productos"]["tmp_name"]["Foto"],"assets/upload/productos/" . $nombre);
-							    $imagen = true;
-						    }
-		  				}
-					} else {
-					  	echo "Invalid file";
+					$estImg = true;
+					if($_FILES["Productos"]["name"]["Foto"] != ""){
+						if ((($_FILES["Productos"]["type"]["Foto"] == "image/gif")
+						|| ($_FILES["Productos"]["type"]["Foto"] == "image/jpeg")
+						|| ($_FILES["Productos"]["type"]["Foto"] == "image/jpg")
+						|| ($_FILES["Productos"]["type"]["Foto"] == "image/pjpeg")
+						|| ($_FILES["Productos"]["type"]["Foto"] == "image/x-png")
+						|| ($_FILES["Productos"]["type"]["Foto"] == "image/png"))
+						&& in_array($extension, $allowedExts)) {
+			  				if ($_FILES["Productos"]["error"]["Foto"] > 0) {
+			    				echo "Return Code: " . $_FILES["Productos"]["error"]["Foto"] . "<br>";
+			  				} else {
+							    if (!file_exists(Yii::app()->request->baseUrl."/assets/upload/productos/" . $nombre)) {
+								    move_uploaded_file($_FILES["Productos"]["tmp_name"]["Foto"],"assets/upload/productos/" . $nombre);
+								    $imagen = true;
+							    }
+			  				}
+						} else {
+						  	echo "Invalid file";
+						}
+					}else{
+						$imagen = true;
+						$estImg= false;
 					}
 					if($imagen){
-						$model->Foto=$nombre;
+
+						$model->Foto=$estImg?$nombre:'#';
 						$model->NombreProducto=$_POST["Productos"]['NombreProducto'];
 						$model->FichaTecnica=$_POST["Productos"]['FichaTecnica'];
 						$model->Categoria_idCategoria=$_POST["Productos"]['Categoria_idCategoria'];
@@ -129,7 +134,7 @@ class ProductosController extends Controller
 			$a = array();
 			foreach ($model as $key => $value) {
 				$a[] = array(
-					'idProductos'=>$value->idProductos,
+					'idProductos'=>$this->encrypt($value->idProductos),
 					'Foto'=>Yii::app()->request->baseUrl.'/assets/upload/productos/'.$value->Foto,
 					'NombreProducto'=>$value->NombreProducto,
 					'FichaTecnica'=>$value->FichaTecnica,
@@ -142,38 +147,36 @@ class ProductosController extends Controller
 		}
 	}
 
-	/**
-	 * Updates a particular model.
-	 * If update is successful, the browser will be redirected to the 'view' page.
-	 * @param integer $id the ID of the model to be updated
-	 */
+
 	public function actionUpdate()
 	{
 
 		if(!Yii::app()->user->isGuest){
-
-			$model=$this->loadModel($_POST["txtCodigo"]);
 
 			// Uncomment the following line if AJAX validation is needed
 			// $this->performAjaxValidation($model);
 
 			if(isset($_POST["Productos"]))
 			{
-				if(isset($_FILES["Productos"])){
+				$model=$this->loadModel($this->decrypt($_POST["txtCodigo"]));
+				$modImg = false;
 
-				}
-				$allowedExts = array("gif", "jpeg", "jpg", "png");
-				$temp = explode(".", $_FILES["Productos"]["name"]["Foto"]);
-				$extension = end($temp);
 
-				$m=Productos::model()->findAll("Vitrina_idVitrina = ".Yii::app()->user->getState("idVitrina"));
-				$np = count($m);
+				if($_FILES["Productos"]["name"]["Foto"] != ""){
 
-				if($np < Yii::app()->user->getState("NumProductos")){
+					$allowedExts = array("gif", "jpeg", "jpg", "png");
+					$temp = explode(".", $_FILES["Productos"]["name"]["Foto"]);
+					$extension = end($temp);
 
 					$nombre =  strtolower(trim($_POST["Productos"]['NombreProducto'])).".".$extension;
 					$imagen = false;
-
+					$verificacionDelete = false;
+					try{
+						@unlink('assets/upload/productos/'.$model->Foto);
+						$verificacionDelete = true;
+					}catch(Exception $e){
+						$verificacionDelete = false;
+					}
 
 					if ((($_FILES["Productos"]["type"]["Foto"] == "image/gif")
 					|| ($_FILES["Productos"]["type"]["Foto"] == "image/jpeg")
@@ -185,33 +188,39 @@ class ProductosController extends Controller
 		  				if ($_FILES["Productos"]["error"]["Foto"] > 0) {
 		    				echo "Return Code: " . $_FILES["Productos"]["error"]["Foto"] . "<br>";
 		  				} else {
-						    if (!file_exists(Yii::app()->request->baseUrl."/assets/upload/productos/" . $_FILES["Productos"]["name"]["Foto"])) {
+						    if (!file_exists(Yii::app()->request->baseUrl."/assets/upload/productos/" . $nombre)) {
 							    move_uploaded_file($_FILES["Productos"]["tmp_name"]["Foto"],"assets/upload/productos/" . $nombre);
 							    $imagen = true;
+							    $modImg = true;
 						    }
 		  				}
 					} else {
-					  	echo "Invalid file";
+					  	echo "No fue posible guardar la foto";
 					}
-					if($imagen){
-						$model->Foto=$nombre;
-						$model->NombreProducto=$_POST["Productos"]['NombreProducto'];
-						$model->FichaTecnica=$_POST["Productos"]['FichaTecnica'];
-						$model->Categoria_idCategoria=$_POST["Productos"]['Categoria_idCategoria'];
-						$model->Vitrina_idVitrina=Yii::app()->user->getState("idVitrina");
-
-						if($model->save()){
-								echo "1";
-							}else{
-								echo "2";
-							}
-					}else{
-						echo "3";
-					}
-					
 				}else{
-					echo "4.".Yii::app()->user->getState("NumProductos");
+					$imagen = true;
 				}
+
+
+				if($imagen){
+
+					if($modImg){
+						$model->Foto=$nombre;
+					}
+					$model->NombreProducto=$_POST["Productos"]['NombreProducto'];
+					$model->FichaTecnica=$_POST["Productos"]['FichaTecnica'];
+					$model->Categoria_idCategoria=$_POST["Productos"]['Categoria_idCategoria'];
+					$model->Vitrina_idVitrina=Yii::app()->user->getState("idVitrina");
+
+					if($model->save()){
+							echo "1";
+						}else{
+							echo "2";
+						}
+				}else{
+					echo "3";
+				}
+
 			}
 		}else
 		{

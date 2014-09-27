@@ -104,7 +104,7 @@ var usuario = {
          var arrdata = [];
          var array = data.result;
          $.each(array, function(index,obj){
-              var boton = obj.idRol == 1?'<a class="btn btn-primary" onclick="usuario.CambiarRol('+obj.idUsuario+',2)" id="Modify1">Vitrina</a>':'<a class="btn btn-info" onclick="usuario.CambiarRol('+obj.idUsuario+',1)" id="Remove1">Usuario</a>';
+              var boton = obj.idRol == 1?'<a class="btn btn-primary" onclick="usuario.CambiarRol('+"'"+obj.idUsuario+"'"+',2)" id="Modify1">Vitrina</a>':'<a class="btn btn-info" onclick="usuario.CambiarRol('+"'"+obj.idUsuario+"'"+',1)" id="Remove1">Usuario</a>';
               arrdata.push([obj.Nombre, obj.Apellido, obj.Email, boton]);
               //console.log(data.Nombre);
          });
@@ -199,7 +199,7 @@ var productos = {
          var array = data.result;
           
          $.each(array, function(index,obj){
-              arrdata.push(['<img id="imgThumb" src="'+obj.Foto+'" style="height: 150px;  width: 200px;"/>', obj.NombreProducto, obj.Categoria, obj.FichaTecnica, '<a class="btn btn-warning" onclick="productos.SelectCampos('+obj.idProductos+','+"'"+obj.Foto+"'"+','+"'"+obj.NombreProducto+"'"+','+"'"+obj.FichaTecnica+"'"+','+"'"+obj.idCategoria+"'"+')" id="Modify1">Modificar</a>']);
+              arrdata.push(['<img id="imgThumb" src="'+obj.Foto+'" style="height: 150px;  width: 200px;"/>', obj.NombreProducto, obj.Categoria, obj.FichaTecnica, '<a class="btn btn-warning" onclick="productos.SelectCampos('+"'"+obj.idProductos+"'"+','+"'"+obj.Foto+"'"+','+"'"+obj.NombreProducto+"'"+','+"'"+obj.FichaTecnica+"'"+','+"'"+obj.idCategoria+"'"+')" id="Modify1">Modificar</a>']);
          });
 
          $('#dynamicProductos').html( '<table class="table table-hover table-condensed" id="tblProductos"></table>' );
@@ -233,10 +233,11 @@ var productos = {
   SelectCampos:function(id, foto, nombre, ficha, idcategoria){
     $('#txtNombre').val(nombre);
     $('#ddlCategoria').val(idcategoria);
-    $('#txtFichaTecnica').text(nombre);
+    $('#txtFichaTecnica').text(ficha);
     $('#list').html("<span><img id='imgThumb' src='"+foto+"' class='thumb'/></span>");
 
     $('#txtCodigo').val(id);
+ 
 
     $('#btnModificar').removeAttr("disabled");
     $('#btnModificar').attr("onclick",'javascript: productos.ModificarProducto("productos-form");');
@@ -248,6 +249,7 @@ var productos = {
     $('#txtNombre').val("");
     $('#ddlCategoria').val("");
     $('#txtCodigo').val("");
+
     var valor = "";
     $("#ddlCategoria option").val("");
     $('#txtFichaTecnica').val('');
@@ -284,9 +286,12 @@ var productos = {
             }else{
               resource.notify('Upss',data, 'glyphicon glyphicon-remove');
             }
-            productos.LimpiarProducto();
           }
         });
     }
   },
 };
+
+var evento = {
+  
+}

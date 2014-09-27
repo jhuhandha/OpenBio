@@ -2625,3 +2625,518 @@ REQUEST_URI=/Framework/OpenBio/
 in C:\wamp\www\Framework\OpenBio\protected\components\UserIdentity.php (45)
 in C:\wamp\www\Framework\OpenBio\protected\models\LoginForm.php (52)
 in C:\wamp\www\Framework\OpenBio\protected\controllers\LoginController.php (25)
+2014/09/27 05:57:33 [error] [php] unlink(/Framework/OpenBio/assets/upload/productos/prueba.jpg): No such file or directory (C:\wamp\www\Framework\OpenBio\protected\controllers\ProductosController.php:170)
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(133): ProductosController->runAction()
+#2 C:\wamp\www\Framework\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\Framework\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\wamp\www\Framework\yii\framework\web\filters\CInlineFilter.php(58): ProductosController->filterAccessControl()
+#5 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\wamp\www\Framework\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\Framework\yii\framework\web\CController.php(265): ProductosController->runActionWithFilters()
+#8 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): ProductosController->run()
+#9 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\Framework\OpenBio\index.php(13): CWebApplication->run()
+REQUEST_URI=/Framework/OpenBio/productos/Update
+in C:\wamp\www\Framework\OpenBio\protected\controllers\ProductosController.php (170)
+in C:\wamp\www\Framework\OpenBio\index.php (13)
+2014/09/27 05:59:43 [error] [php] unlink(.//Framework/OpenBio/assets/upload/productos/prueba.jpg): No such file or directory (C:\wamp\www\Framework\OpenBio\protected\controllers\ProductosController.php:170)
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(133): ProductosController->runAction()
+#2 C:\wamp\www\Framework\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\Framework\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\wamp\www\Framework\yii\framework\web\filters\CInlineFilter.php(58): ProductosController->filterAccessControl()
+#5 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\wamp\www\Framework\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\Framework\yii\framework\web\CController.php(265): ProductosController->runActionWithFilters()
+#8 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): ProductosController->run()
+#9 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\Framework\OpenBio\index.php(13): CWebApplication->run()
+REQUEST_URI=/Framework/OpenBio/productos/Update
+in C:\wamp\www\Framework\OpenBio\protected\controllers\ProductosController.php (170)
+in C:\wamp\www\Framework\OpenBio\index.php (13)
+2014/09/27 05:59:57 [error] [php] unlink(./Framework/OpenBio/assets/upload/productos/prueba.jpg): No such file or directory (C:\wamp\www\Framework\OpenBio\protected\controllers\ProductosController.php:170)
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(133): ProductosController->runAction()
+#2 C:\wamp\www\Framework\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\Framework\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\wamp\www\Framework\yii\framework\web\filters\CInlineFilter.php(58): ProductosController->filterAccessControl()
+#5 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\wamp\www\Framework\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\Framework\yii\framework\web\CController.php(265): ProductosController->runActionWithFilters()
+#8 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): ProductosController->run()
+#9 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\Framework\OpenBio\index.php(13): CWebApplication->run()
+REQUEST_URI=/Framework/OpenBio/productos/Update
+in C:\wamp\www\Framework\OpenBio\protected\controllers\ProductosController.php (170)
+in C:\wamp\www\Framework\OpenBio\index.php (13)
+2014/09/27 06:01:29 [error] [php] unlink($_POST[&quot;txtFoto&quot;]): Invalid argument (C:\wamp\www\Framework\OpenBio\protected\controllers\ProductosController.php:170)
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(133): ProductosController->runAction()
+#2 C:\wamp\www\Framework\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\Framework\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\wamp\www\Framework\yii\framework\web\filters\CInlineFilter.php(58): ProductosController->filterAccessControl()
+#5 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\wamp\www\Framework\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\Framework\yii\framework\web\CController.php(265): ProductosController->runActionWithFilters()
+#8 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): ProductosController->run()
+#9 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\Framework\OpenBio\index.php(13): CWebApplication->run()
+REQUEST_URI=/Framework/OpenBio/productos/Update
+in C:\wamp\www\Framework\OpenBio\protected\controllers\ProductosController.php (170)
+in C:\wamp\www\Framework\OpenBio\index.php (13)
+2014/09/27 06:02:00 [error] [php] unlink(&quot;/Framework/OpenBio/assets/upload/productos/prueba.jpg&quot;): Invalid argument (C:\wamp\www\Framework\OpenBio\protected\controllers\ProductosController.php:170)
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(133): ProductosController->runAction()
+#2 C:\wamp\www\Framework\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\Framework\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\wamp\www\Framework\yii\framework\web\filters\CInlineFilter.php(58): ProductosController->filterAccessControl()
+#5 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\wamp\www\Framework\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\Framework\yii\framework\web\CController.php(265): ProductosController->runActionWithFilters()
+#8 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): ProductosController->run()
+#9 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\Framework\OpenBio\index.php(13): CWebApplication->run()
+REQUEST_URI=/Framework/OpenBio/productos/Update
+in C:\wamp\www\Framework\OpenBio\protected\controllers\ProductosController.php (170)
+in C:\wamp\www\Framework\OpenBio\index.php (13)
+2014/09/27 06:02:33 [error] [php] unlink('/Framework/OpenBio/assets/upload/productos/prueba.jpg'): No such file or directory (C:\wamp\www\Framework\OpenBio\protected\controllers\ProductosController.php:170)
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(133): ProductosController->runAction()
+#2 C:\wamp\www\Framework\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\Framework\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\wamp\www\Framework\yii\framework\web\filters\CInlineFilter.php(58): ProductosController->filterAccessControl()
+#5 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\wamp\www\Framework\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\Framework\yii\framework\web\CController.php(265): ProductosController->runActionWithFilters()
+#8 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): ProductosController->run()
+#9 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\Framework\OpenBio\index.php(13): CWebApplication->run()
+REQUEST_URI=/Framework/OpenBio/productos/Update
+in C:\wamp\www\Framework\OpenBio\protected\controllers\ProductosController.php (170)
+in C:\wamp\www\Framework\OpenBio\index.php (13)
+2014/09/27 06:05:01 [error] [php] unlink('../Framework/OpenBio/assets/upload/productos/prueba.jpg'): No such file or directory (C:\wamp\www\Framework\OpenBio\protected\controllers\ProductosController.php:170)
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(133): ProductosController->runAction()
+#2 C:\wamp\www\Framework\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\Framework\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\wamp\www\Framework\yii\framework\web\filters\CInlineFilter.php(58): ProductosController->filterAccessControl()
+#5 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\wamp\www\Framework\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\Framework\yii\framework\web\CController.php(265): ProductosController->runActionWithFilters()
+#8 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): ProductosController->run()
+#9 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\Framework\OpenBio\index.php(13): CWebApplication->run()
+REQUEST_URI=/Framework/OpenBio/productos/Update
+in C:\wamp\www\Framework\OpenBio\protected\controllers\ProductosController.php (170)
+in C:\wamp\www\Framework\OpenBio\index.php (13)
+2014/09/27 06:08:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/upload/productos/prueba.jpg"' in C:\wamp\www\Framework\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/upload/p...')
+#1 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Framework/OpenBio/assets/upload/productos/prueba.jpg
+HTTP_REFERER=http://localhost:90/Framework/OpenBio/productos/index
+---
+2014/09/27 06:09:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/upload/productos/prueba.jpg"' in C:\wamp\www\Framework\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/upload/p...')
+#1 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Framework/OpenBio/assets/upload/productos/prueba.jpg
+HTTP_REFERER=http://localhost:90/Framework/OpenBio/productos/index
+---
+2014/09/27 06:09:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/upload/productos/prueba.jpg"' in C:\wamp\www\Framework\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/upload/p...')
+#1 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Framework/OpenBio/assets/upload/productos/prueba.jpg
+HTTP_REFERER=http://localhost:90/Framework/OpenBio/productos/index
+---
+2014/09/27 06:09:40 [error] [php] unlink(assets/upload/productos/prueba.jpg): No such file or directory (C:\wamp\www\Framework\OpenBio\protected\controllers\ProductosController.php:171)
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(133): ProductosController->runAction()
+#2 C:\wamp\www\Framework\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\Framework\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\wamp\www\Framework\yii\framework\web\filters\CInlineFilter.php(58): ProductosController->filterAccessControl()
+#5 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\wamp\www\Framework\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\Framework\yii\framework\web\CController.php(265): ProductosController->runActionWithFilters()
+#8 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): ProductosController->run()
+#9 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\Framework\OpenBio\index.php(13): CWebApplication->run()
+REQUEST_URI=/Framework/OpenBio/productos/Update
+in C:\wamp\www\Framework\OpenBio\protected\controllers\ProductosController.php (171)
+in C:\wamp\www\Framework\OpenBio\index.php (13)
+2014/09/27 06:11:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/upload/productos/prueba.jpg"' in C:\wamp\www\Framework\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/upload/p...')
+#1 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Framework/OpenBio/assets/upload/productos/prueba.jpg
+HTTP_REFERER=http://localhost:90/Framework/OpenBio/productos/index
+---
+2014/09/27 06:16:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/upload/productos/prueba.jpg"' in C:\wamp\www\Framework\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/upload/p...')
+#1 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Framework/OpenBio/assets/upload/productos/prueba.jpg
+HTTP_REFERER=http://localhost:90/Framework/OpenBio/productos/index
+---
+2014/09/27 06:16:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/upload/productos/prueba.jpg"' in C:\wamp\www\Framework\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/upload/p...')
+#1 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Framework/OpenBio/assets/upload/productos/prueba.jpg
+HTTP_REFERER=http://localhost:90/Framework/OpenBio/productos/index
+---
+2014/09/27 06:16:22 [error] [php] unlink(assets/upload/productos/prueba.jpg): No such file or directory (C:\wamp\www\Framework\OpenBio\protected\controllers\ProductosController.php:173)
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(133): ProductosController->runAction()
+#2 C:\wamp\www\Framework\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\Framework\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\wamp\www\Framework\yii\framework\web\filters\CInlineFilter.php(58): ProductosController->filterAccessControl()
+#5 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\wamp\www\Framework\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\Framework\yii\framework\web\CController.php(265): ProductosController->runActionWithFilters()
+#8 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): ProductosController->run()
+#9 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\Framework\OpenBio\index.php(13): CWebApplication->run()
+REQUEST_URI=/Framework/OpenBio/productos/Update
+in C:\wamp\www\Framework\OpenBio\protected\controllers\ProductosController.php (173)
+in C:\wamp\www\Framework\OpenBio\index.php (13)
+2014/09/27 06:18:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/upload/productos/prueba.jpg"' in C:\wamp\www\Framework\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/upload/p...')
+#1 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Framework/OpenBio/assets/upload/productos/prueba.jpg
+HTTP_REFERER=http://localhost:90/Framework/OpenBio/productos/index
+---
+2014/09/27 06:18:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/upload/productos/prueba.jpg"' in C:\wamp\www\Framework\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/upload/p...')
+#1 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Framework/OpenBio/assets/upload/productos/prueba.jpg
+HTTP_REFERER=http://localhost:90/Framework/OpenBio/productos/index
+---
+2014/09/27 06:43:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/upload/productos/prueba.jpg"' in C:\wamp\www\Framework\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/upload/p...')
+#1 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Framework/OpenBio/assets/upload/productos/prueba.jpg
+HTTP_REFERER=http://localhost:90/Framework/OpenBio/productos/index
+---
+2014/09/27 06:43:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/upload/productos/prueba.jpg"' in C:\wamp\www\Framework\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/upload/p...')
+#1 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Framework/OpenBio/assets/upload/productos/prueba.jpg
+HTTP_REFERER=http://localhost:90/Framework/OpenBio/productos/index
+---
+2014/09/27 14:26:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/upload/productos/prueba.png"' in C:\wamp\www\Framework\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/upload/p...')
+#1 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Framework/OpenBio/assets/upload/productos/prueba.png
+HTTP_REFERER=http://localhost:90/Framework/OpenBio/productos/index
+---
+2014/09/27 15:14:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "adminagenda" solicitada.' in C:\wamp\www\Framework\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CController.php(270): CController->missingAction('adminagenda')
+#1 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): CController->run('adminagenda')
+#2 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('evento/adminage...')
+#3 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Framework/OpenBio/evento/adminagenda
+HTTP_REFERER=http://localhost:90/Framework/OpenBio/app/index
+---
+2014/09/27 15:15:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "index" solicitada.' in C:\wamp\www\Framework\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CController.php(270): CController->missingAction('index')
+#1 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#2 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('evento/index')
+#3 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Framework/OpenBio/evento/index
+---
+2014/09/27 15:15:48 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\Framework\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\Framework\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\Framework\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\Framework\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\Framework\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\Framework\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): CController->run('adminagenda')
+#8 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('evento/adminage...')
+#9 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Framework/OpenBio/evento/adminagenda
+---
+2014/09/27 15:15:50 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\Framework\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\Framework\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\Framework\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\Framework\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\Framework\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\Framework\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): CController->run('adminagenda')
+#8 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('evento/adminage...')
+#9 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Framework/OpenBio/evento/adminagenda
+---
+2014/09/27 15:15:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "index" solicitada.' in C:\wamp\www\Framework\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('evento')
+#3 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Framework/OpenBio/evento/
+---
+2014/09/27 15:16:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\Framework\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\Framework\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\Framework\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\Framework\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\Framework\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\Framework\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): CController->run('adminagenda')
+#8 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('evento/adminage...')
+#9 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Framework/OpenBio/evento/adminagenda
+HTTP_REFERER=http://localhost:90/Framework/OpenBio/app/index
+---
+2014/09/27 15:17:04 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\Framework\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\Framework\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\Framework\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\Framework\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\Framework\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\Framework\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): CController->run('adminagenda')
+#8 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('evento/adminage...')
+#9 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Framework/OpenBio/evento/adminagenda
+HTTP_REFERER=http://localhost:90/Framework/OpenBio/app/index
+---
+2014/09/27 15:17:50 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\Framework\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\Framework\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\Framework\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\Framework\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\Framework\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\Framework\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): CController->run('adminagenda')
+#8 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('evento/adminage...')
+#9 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Framework/OpenBio/evento/adminagenda
+---
+2014/09/27 15:17:51 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\Framework\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\Framework\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\Framework\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\Framework\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\Framework\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\Framework\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): CController->run('adminagenda')
+#8 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('evento/adminage...')
+#9 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Framework/OpenBio/evento/adminagenda
+---
+2014/09/27 15:17:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\Framework\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\Framework\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\Framework\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\Framework\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\Framework\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\Framework\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): CController->run('adminagenda')
+#8 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('evento/adminage...')
+#9 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Framework/OpenBio/evento/adminagenda
+---
+2014/09/27 15:20:26 [error] [php] Undefined variable: nuevaHora (C:\wamp\www\Framework\OpenBio\protected\controllers\EventoController.php:122)
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(133): EventoController->runAction()
+#1 C:\wamp\www\Framework\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\Framework\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\Framework\yii\framework\web\filters\CInlineFilter.php(58): EventoController->filterAccessControl()
+#4 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\Framework\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\Framework\yii\framework\web\CController.php(265): EventoController->runActionWithFilters()
+#7 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): EventoController->run()
+#8 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\Framework\OpenBio\index.php(13): CWebApplication->run()
+REQUEST_URI=/Framework/OpenBio/evento/adminagenda
+in C:\wamp\www\Framework\OpenBio\protected\controllers\EventoController.php (122)
+in C:\wamp\www\Framework\OpenBio\index.php (13)
+2014/09/27 15:22:48 [error] [php] Undefined variable: nuevaHoraV (C:\wamp\www\Framework\OpenBio\protected\controllers\EventoController.php:123)
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(133): EventoController->runAction()
+#1 C:\wamp\www\Framework\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\Framework\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\Framework\yii\framework\web\filters\CInlineFilter.php(58): EventoController->filterAccessControl()
+#4 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\Framework\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\Framework\yii\framework\web\CController.php(265): EventoController->runActionWithFilters()
+#7 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): EventoController->run()
+#8 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\Framework\OpenBio\index.php(13): CWebApplication->run()
+REQUEST_URI=/Framework/OpenBio/evento/adminagenda
+in C:\wamp\www\Framework\OpenBio\protected\controllers\EventoController.php (123)
+in C:\wamp\www\Framework\OpenBio\index.php (13)
+2014/09/27 15:31:14 [error] [php] Trying to get property of non-object (C:\wamp\www\Framework\OpenBio\protected\controllers\EventoController.php:118)
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(133): EventoController->runAction()
+#1 C:\wamp\www\Framework\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\Framework\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\Framework\yii\framework\web\filters\CInlineFilter.php(58): EventoController->filterAccessControl()
+#4 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\Framework\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\Framework\yii\framework\web\CController.php(265): EventoController->runActionWithFilters()
+#7 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): EventoController->run()
+#8 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\Framework\OpenBio\index.php(13): CWebApplication->run()
+REQUEST_URI=/Framework/OpenBio/evento/adminagenda
+in C:\wamp\www\Framework\OpenBio\protected\controllers\EventoController.php (118)
+in C:\wamp\www\Framework\OpenBio\index.php (13)
+2014/09/27 15:33:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "index"' in C:\wamp\www\Framework\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('index')
+#1 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Framework/OpenBio/index
+---
+2014/09/27 15:51:03 [error] [php] Undefined variable: taba (C:\wamp\www\Framework\OpenBio\protected\controllers\EventoController.php:147)
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(133): EventoController->runAction()
+#1 C:\wamp\www\Framework\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\Framework\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\Framework\yii\framework\web\filters\CInlineFilter.php(58): EventoController->filterAccessControl()
+#4 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\Framework\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\Framework\yii\framework\web\CController.php(265): EventoController->runActionWithFilters()
+#7 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): EventoController->run()
+#8 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\Framework\OpenBio\index.php(13): CWebApplication->run()
+REQUEST_URI=/Framework/OpenBio/evento/adminagenda
+in C:\wamp\www\Framework\OpenBio\protected\controllers\EventoController.php (147)
+in C:\wamp\www\Framework\OpenBio\index.php (13)
+2014/09/27 16:24:07 [error] [exception.CException] exception 'CException' with message 'La propiedad "CWebApplication"."secuirtyManager" no se encuentra definida.' in C:\wamp\www\Framework\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\base\CModule.php(105): CComponent->__get('secuirtyManager')
+#1 C:\wamp\www\Framework\OpenBio\protected\controllers\UsuarioController.php(162): CModule->__get('secuirtyManager')
+#2 C:\wamp\www\Framework\yii\framework\web\actions\CInlineAction.php(49): UsuarioController->actionListarUsuario()
+#3 C:\wamp\www\Framework\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\Framework\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\Framework\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\Framework\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\Framework\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\Framework\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): CController->run('ListarUsuario')
+#12 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/ListarU...')
+#13 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/Framework/OpenBio/usuario/ListarUsuario
+HTTP_REFERER=http://localhost:90/Framework/OpenBio/usuario/adminvitrina
+---
+2014/09/27 16:28:04 [error] [exception.CException] exception 'CException' with message 'La configuración del objeto debe ser un array conteniendo un elemento "class".' in C:\wamp\www\Framework\yii\framework\YiiBase.php:193
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#1 C:\wamp\www\Framework\yii\framework\base\CModule.php(103): CModule->getComponent('secuirtyManager')
+#2 C:\wamp\www\Framework\OpenBio\protected\controllers\UsuarioController.php(162): CModule->__get('secuirtyManager')
+#3 C:\wamp\www\Framework\yii\framework\web\actions\CInlineAction.php(49): UsuarioController->actionListarUsuario()
+#4 C:\wamp\www\Framework\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\Framework\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\Framework\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\Framework\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\Framework\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\Framework\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): CController->run('ListarUsuario')
+#13 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/ListarU...')
+#14 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Framework/OpenBio/usuario/ListarUsuario
+HTTP_REFERER=http://localhost:90/Framework/OpenBio/usuario/adminvitrina
+---
+2014/09/27 16:35:56 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`openbio`.`usuario`, CONSTRAINT `fk_Usuario_Rol1` FOREIGN KEY (`Rol_idRol`) REFERENCES `rol` (`idRol`) ON DELETE CASCADE ON UPDATE CASCADE). La sentencia SQL ejecutada fue: UPDATE `usuario` SET `idUsuario`=:yp0, `Foto`=:yp1, `Nombre`=:yp2, `Apellido`=:yp3, `NombreEmpresa`=:yp4, `Email`=:yp5, `Celular`=:yp6, `Direccion`=:yp7, `Rol_idRol`=:yp8, `Usuario`=:yp9, `Clave`=:yp10 WHERE `usuario`.`idUsuario`=4.
+in C:\wamp\www\Framework\OpenBio\protected\controllers\UsuarioController.php (205)
+in C:\wamp\www\Framework\OpenBio\index.php (13)
