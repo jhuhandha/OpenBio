@@ -293,5 +293,35 @@ var productos = {
 };
 
 var evento = {
-  
+  CrearEvento:function(form){
+    if(resource.parsley(form)){
+        var formData = new FormData($("#agenda-evento")[0]);
+        $.ajax({
+            url: "Create",
+            type: 'POST',
+            data: formData,
+            dataType:'text',
+            cache: false,
+            contentType: false,
+            processData: false
+        }).done(function(data){
+          if(data=="1"){
+            resource.notify('En hora buena','Se modifico la información','success','glyphicon glyphicon-ok');
+            setTimeout(function(){
+              location.href = "adminagenda";
+            },2000);
+            
+          }else if(data=="2"){
+            resource.notify('Upss','Ha ocurrido un error','error', 'glyphicon glyphicon-remove');
+          }else{
+            var error = data.split(".");
+            if(error[0]=="4"){
+              resource.notify('Upss',"Solo tienes permitido el registro de "+error[1]+" Productos", 'glyphicon glyphicon-remove');
+            }else{
+              resource.notify('Upss',data, 'glyphicon glyphicon-remove');
+            }
+          }
+        });
+    }
+  }
 }

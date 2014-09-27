@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-09-2014 a las 17:55:25
+-- Tiempo de generación: 27-09-2014 a las 16:54:50
 -- Versión del servidor: 5.6.17
 -- Versión de PHP: 5.5.12
 
@@ -50,7 +50,17 @@ CREATE TABLE IF NOT EXISTS `estadoevento` (
   `idEstadoEvento` int(11) NOT NULL AUTO_INCREMENT,
   `NombreEstado` varchar(20) NOT NULL,
   PRIMARY KEY (`idEstadoEvento`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Volcado de datos para la tabla `estadoevento`
+--
+
+INSERT INTO `estadoevento` (`idEstadoEvento`, `NombreEstado`) VALUES
+(1, 'Descanso'),
+(2, 'Ocupado'),
+(3, 'Disponible'),
+(4, 'Reservado - (por val');
 
 -- --------------------------------------------------------
 
@@ -61,11 +71,20 @@ CREATE TABLE IF NOT EXISTS `estadoevento` (
 CREATE TABLE IF NOT EXISTS `evento` (
   `idEvento` int(11) NOT NULL AUTO_INCREMENT,
   `NombreEvento` varchar(40) NOT NULL,
-  `FechaInicio` date NOT NULL,
-  `FechaFinal` date NOT NULL,
+  `FechaEvento` date NOT NULL,
+  `Intervalo` int(11) NOT NULL,
+  `HoraInicio` varchar(6) NOT NULL,
+  `HoraFinal` varchar(6) NOT NULL,
   `Estado` bit(1) NOT NULL,
   PRIMARY KEY (`idEvento`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Volcado de datos para la tabla `evento`
+--
+
+INSERT INTO `evento` (`idEvento`, `NombreEvento`, `FechaEvento`, `Intervalo`, `HoraInicio`, `HoraFinal`, `Estado`) VALUES
+(1, ' Evento', '2014-09-30', 30, '08:00', '16:00', b'1');
 
 -- --------------------------------------------------------
 
@@ -98,9 +117,10 @@ INSERT INTO `interes` (`idInteres`, `NombreIntere`) VALUES
 
 CREATE TABLE IF NOT EXISTS `itemevento` (
   `idItemEvento` int(11) NOT NULL AUTO_INCREMENT,
-  `Estado` bit(1) NOT NULL,
-  `HoraInicio` time NOT NULL,
-  `HoraFinal` time NOT NULL,
+  `HoraInicio` varchar(5) NOT NULL,
+  `HoraFinal` varchar(5) NOT NULL,
+  `Actividad` varchar(100) NOT NULL,
+  `Detalle` varchar(100) NOT NULL,
   `Evento_idEvento` int(11) NOT NULL,
   `Vitrina_idVitrina` int(11) NOT NULL,
   `EstadoEvento_idEstadoEvento` int(11) NOT NULL,
@@ -122,7 +142,7 @@ CREATE TABLE IF NOT EXISTS `modulo` (
   `Url` varchar(100) NOT NULL,
   `Estado` bit(1) DEFAULT NULL,
   PRIMARY KEY (`idModulo`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
 -- Volcado de datos para la tabla `modulo`
@@ -132,8 +152,9 @@ INSERT INTO `modulo` (`idModulo`, `NombreModulo`, `Url`, `Estado`) VALUES
 (1, 'Información Personal', '#', b'1'),
 (2, 'Vitrina', 'usuario/adminvitrina', b'1'),
 (4, 'Producto', 'productos/index', b'1'),
-(5, 'Agenda', '#', b'1'),
-(6, 'Inicio', 'app/index', b'1');
+(5, 'Administrar Agenda', 'evento/adminagenda', b'1'),
+(6, 'Inicio', 'app/index', b'1'),
+(7, 'Agenda', '#', b'1');
 
 -- --------------------------------------------------------
 
@@ -148,7 +169,7 @@ CREATE TABLE IF NOT EXISTS `modulorol` (
   PRIMARY KEY (`idModuloRol`),
   KEY `fk_ModuloRol_Modulo_idx` (`Modulo_idModulo`),
   KEY `fk_ModuloRol_Rol1_idx` (`Rol_idRol`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
 --
 -- Volcado de datos para la tabla `modulorol`
@@ -162,7 +183,8 @@ INSERT INTO `modulorol` (`idModuloRol`, `Modulo_idModulo`, `Rol_idRol`) VALUES
 (5, 4, 2),
 (6, 5, 2),
 (7, 6, 1),
-(8, 6, 2);
+(8, 6, 2),
+(11, 7, 1);
 
 -- --------------------------------------------------------
 
@@ -189,7 +211,7 @@ CREATE TABLE IF NOT EXISTS `productos` (
 INSERT INTO `productos` (`idProductos`, `Foto`, `NombreProducto`, `FichaTecnica`, `Vitrina_idVitrina`, `Categoria_idCategoria`) VALUES
 (1, 'prueba.jpg', 'Prueba', 'poreuab jdfojosd sdkfbisd ksdfnksd', 3, 1),
 (5, 'preee.jpg', 'Preee', 'Bio', 3, 1),
-(6, 'prueba.jpg', 'Prueba', 'kdfhiksd', 5, 2);
+(6, 'prueba.png', 'Prueba', 'Nueva actualizacion 2.1', 5, 2);
 
 -- --------------------------------------------------------
 

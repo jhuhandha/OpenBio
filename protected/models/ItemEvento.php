@@ -32,12 +32,12 @@ class ItemEvento extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('Estado, HoraInicio, HoraFinal, Actividad, Detalle, Evento_idEvento, Vitrina_idVitrina, EstadoEvento_idEstadoEvento', 'required'),
-			array('Estado, Evento_idEvento, Vitrina_idVitrina, EstadoEvento_idEstadoEvento', 'numerical', 'integerOnly'=>true),
+			array('HoraInicio, HoraFinal, Actividad, Detalle, Evento_idEvento, Vitrina_idVitrina, EstadoEvento_idEstadoEvento', 'required'),
+			array('Evento_idEvento, Vitrina_idVitrina, EstadoEvento_idEstadoEvento', 'numerical', 'integerOnly'=>true),
 			array('Actividad, Detalle', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idItemEvento, Estado, HoraInicio, HoraFinal, Actividad, Detalle, Evento_idEvento, Vitrina_idVitrina, EstadoEvento_idEstadoEvento', 'safe', 'on'=>'search'),
+			array('idItemEvento, HoraInicio, HoraFinal, Actividad, Detalle, Evento_idEvento, Vitrina_idVitrina, EstadoEvento_idEstadoEvento', 'safe', 'on'=>'search'),
 		);
 	}
 

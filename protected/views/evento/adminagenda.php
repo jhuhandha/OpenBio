@@ -19,11 +19,22 @@
 		</table>
 	</div>
 	<div class="row">
-		<?php  echo CHtml::htmlButton('Enviar',array(
-                'onclick'=>'javascript: evento.CrearEvento("agenda-evento");', // on submit call JS send() function
-                'id'=> 'btnGuardar', // button id
-                'class'=>'btn btn-success',
-            ));
+		<?php if($btnGuardar){
+			  echo CHtml::htmlButton('Enviar',array(
+	                'onclick'=>'javascript: evento.CrearEvento("agenda-evento");', // on submit call JS send() function
+	                'id'=> 'btnGuardar', // button id
+	                'class'=>'btn btn-success',
+	          ));
+			}
+    	?>		
+    	<?php 
+    		if($btnModificar){
+	    	 	echo CHtml::htmlButton('Modificar',array(
+	                'onclick'=>'javascript: evento.ModificarEvento("agenda-evento");', // on submit call JS send() function
+	                'id'=> 'btnModificar', // button id
+	                'class'=>'btn btn-warning',
+	            ));
+	          }
     	?>
 	</div>
 </form>
