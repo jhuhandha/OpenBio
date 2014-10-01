@@ -100,7 +100,11 @@ class ProductosController extends Controller
 
 						$model->Foto=$estImg?$nombre:'#';
 						$model->NombreProducto=$_POST["Productos"]['NombreProducto'];
-						$model->FichaTecnica=$_POST["Productos"]['FichaTecnica'];
+						$model->DescripcionTecnologia=$_POST["Productos"]['DescripcionTecnologia'];
+						$model->PalabrasClaves=$_POST["Productos"]['PalabrasClaves'];
+						$model->EstadoDesarrollo=$_POST["Productos"]['EstadoDesarrollo'];
+						$model->EstadoPL=$_POST["Productos"]['EstadoPL'];
+						$model->InteresComercial=$_POST["Productos"]['InteresComercial'];
 						$model->Categoria_idCategoria=$_POST["Productos"]['Categoria_idCategoria'];
 						$model->Vitrina_idVitrina=Yii::app()->user->getState("idVitrina");
 
@@ -137,7 +141,11 @@ class ProductosController extends Controller
 					'idProductos'=>$this->encrypt($value->idProductos),
 					'Foto'=>Yii::app()->request->baseUrl.'/assets/upload/productos/'.$value->Foto,
 					'NombreProducto'=>$value->NombreProducto,
-					'FichaTecnica'=>$value->FichaTecnica,
+					'DescripcionTecnologia'=>$value->DescripcionTecnologia,
+					'PalabrasClaves'=>$value->PalabrasClaves,
+					'EstadoDesarrollo'=>$value->EstadoDesarrollo,
+					'EstadoPL'=>$value->EstadoPL,
+					'InteresComercial'=>$value->InteresComercial,
 					'Categoria'=>$value->categoriaIdCategoria->NombreCategoria,
 					'idCategoria'=>$value->categoriaIdCategoria->idCategoria
 				);
@@ -208,7 +216,11 @@ class ProductosController extends Controller
 						$model->Foto=$nombre;
 					}
 					$model->NombreProducto=$_POST["Productos"]['NombreProducto'];
-					$model->FichaTecnica=$_POST["Productos"]['FichaTecnica'];
+					$model->DescripcionTecnologia=$_POST["Productos"]['DescripcionTecnologia'];
+					$model->PalabrasClaves=$_POST["Productos"]['PalabrasClaves'];
+					$model->EstadoDesarrollo=$_POST["Productos"]['EstadoDesarrollo'];
+					$model->EstadoPL=$_POST["Productos"]['EstadoPL'];
+					$model->InteresComercial=$_POST["Productos"]['InteresComercial'];
 					$model->Categoria_idCategoria=$_POST["Productos"]['Categoria_idCategoria'];
 					$model->Vitrina_idVitrina=Yii::app()->user->getState("idVitrina");
 

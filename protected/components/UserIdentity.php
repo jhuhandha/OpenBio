@@ -40,6 +40,7 @@ class UserIdentity extends CUserIdentity
 			}
 
 			$codigoVitrina = Vitrina::model()->find("Usuario_idUsuario = ".$user->idUsuario);
+
 			$idVitrina = $codigoVitrina != null?$codigoVitrina->idVitrina:0;
 			$numP = $codigoVitrina != null?$codigoVitrina->NumProductos:0;
 			$EstVitrina = $codigoVitrina != null?$codigoVitrina->Estado:0;

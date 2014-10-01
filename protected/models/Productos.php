@@ -75,7 +75,7 @@ class Productos extends CActiveRecord
 			'EstadoPL' => 'Estado Pl',
 			'InteresComercial' => 'Interes Comercial',
 			'Vitrina_idVitrina' => 'Vitrina Id Vitrina',
-			'Categoria_idCategoria' => 'Categoria Id Categoria',
+			'Categoria_idCategoria' => 'Categoria',
 		);
 	}
 
