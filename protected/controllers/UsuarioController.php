@@ -107,24 +107,36 @@ class UsuarioController extends Controller
 					$model->Nombre=$_POST["Usuario"]['Nombre'];
 					$model->Rol_idRol="1";
 
-					if($model->save()){
-						$count = 0;
-						foreach ($_POST["Interes"] as $value) {
-							$interes = new UsuarioInteres;
-							$interes->Interes_idInteres = $value;
-							$interes->Usuario_idUsuario = $model->idUsuario;
-							if($interes->save()){
-								$count ++;
+					try{
+						if($model->save()){
+							$count = 0;
+							foreach ($_POST["Interes"] as $value) {
+								$interes = new UsuarioInteres;
+								$interes->Interes_idInteres = $value;
+								$interes->Usuario_idUsuario = $model->idUsuario;
+								if($interes->save()){
+									$count ++;
+								}
 							}
-						}
-						if(count($_POST["Interes"]) == $count){
-							echo "1";
+							if(count($_POST["Interes"]) == $count){
+								$v = new Vitrina;
+								$v->Usuario_idUsuario = $model->idUsuario;
+								$v->Estado = 0;
+								if($v->save()){
+									echo "1";
+								}else{
+									echo "2";
+								}
+							}else{
+								echo "2";
+							}
 						}else{
-							echo "2";
+							echo "3";
 						}
-					}else{
-						echo "3";
+					}catch(Exception $e){
+						echo $e->getMessage();
 					}
+
 				}
 			}
 		}else

@@ -10,8 +10,8 @@
 		<!-- Stylesheets -->
 		<link href="<?php echo Yii::app()->request->baseUrl; ?>/assets/app/css/bootstrap.min.css" rel="stylesheet">
 
-		<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/assets/app/css/style.css">
-		<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/assets/app/css/fontello.css">
+		<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/assets/app/css/sb-admin-2.css">
+		<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/assets/app/font-awesome-4.1.0/css/font-awesome.min.css">
 
 		<!-- Estilo para las tablas DataTables -->
 		<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/assets/DataTables/css/datatables.css" media="all">
@@ -48,62 +48,65 @@
 
 	</head>
 
-  	<body cz-shortcut-listen="true">
+  	<body>
 
-<section class="dashboard content">
-	<div class="container" style="width:95%">
+  	    <div id="wrapper">
 
-			<div class="row">
-				<div class="col-md-3">
-					<div class="widget widget-profile">
-						<div class="widget-header clearfix">
-							<span class="pull-left"><i class="icon-user-male"></i> Perfil</span>
-							<div class="dropdown pull-right">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog-2"></i> <b class="caret"></b></a>
-								<ul class="dropdown-menu">
-				                    <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/login/logout">Cerrar Sesión</a></li>
-				                </ul>
-							</div>
-						</div>
-						<div class="profile-head bg-color dark-blue rounded-top">
-							<div class="box-padding">
-								<img class="avatar img-circle" style="   height: 150px;  width: 200px;" src="<?php echo Yii::app()->request->baseUrl.'/assets/upload/usuarios/'.Yii::app()->user->getState('Url'); ?>">
-								<h3 class="normal"><?php echo Yii::app()->user->getState("Nombre"); ?></h3>
-							</div>
-						</div>
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">OpenBio</a>
+            </div>
+            <!-- /.navbar-header -->
 
-						<div class="bg-color white rounded-bottom">
-							<ul class="menu unstyled">
-								<?php $modulos = Yii::app()->user->getState("Modulos"); ?>
-								<?php foreach ($modulos as $value): ?>
-									<li><a href="<?php echo Yii::app()->request->baseUrl."/".$value['url']; ?>"><i class="icon-chart-line"></i><?php echo $value["nombreModulo"];?></a></li>
-								<?php endforeach ?>
-							</ul>
-						</div>
-					</div>
-				</div>
+            <ul class="nav navbar-top-links navbar-right">
 
-				<div class="col-md-9 widget widget-messaging">
-					<div class="widget-header clearfix">
-						<span class="pull-left"><i class="icon-chat-6"></i> Contenido</span>
-					</div>
-					<?php echo $content; ?>
-				</div>
-			</div>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                            <!-- /input-group -->
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <?php echo Yii::app()->user->getState("Nombre"); ?>
+                        <img class="avatar img-circle" style="   height: 20px;  width: 25px;" src="<?php echo Yii::app()->request->baseUrl.'/assets/upload/usuarios/'.Yii::app()->user->getState('Url'); ?>">
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href=""><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href=""><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/login/logout">Cerrar Sesión</a></li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
 
-			
-	</div>
-</section>
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+						<?php $modulos = Yii::app()->user->getState("Modulos"); ?>
+						<?php foreach ($modulos as $value): ?>
+							<li><a href="<?php echo Yii::app()->request->baseUrl."/".$value['url']; ?>"><i class="icon-chart-line"></i><?php echo $value["nombreModulo"];?></a></li>
+						<?php endforeach ?>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
 
-
-		<div id="footer" class="bg-color dark-blue">
-			<div class="container">
-				<div class="box-padding">
-						Copyright &copy; <?php echo date('Y'); ?> by HANOIT.<br/>
-						All Rights Reserved.<br/>
-				</div>
-			</div>
+		<div id="page-wrapper">
+			<br>
+			<?php echo $content; ?>
 		</div>
+
 		<!-- Javascript -->
 		<!-- JS:bootstrap-->
 		<script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/app/js/bootstrap.min.js"></script>

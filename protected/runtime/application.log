@@ -3336,3 +3336,175 @@ Stack trace:
 #15 {main}
 REQUEST_URI=/Framework/OpenBio/evento/adminagenda
 ---
+2014/10/01 01:02:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/upload/productos/prueba.jpg"' in C:\wamp\www\Framework\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/upload/p...')
+#1 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Framework/OpenBio/assets/upload/productos/prueba.jpg
+HTTP_REFERER=http://localhost:90/Framework/OpenBio/productos/index
+---
+2014/10/01 01:02:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "assets/upload/productos/prueba.jpg"' in C:\wamp\www\Framework\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/upload/p...')
+#1 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Framework/OpenBio/assets/upload/productos/prueba.jpg
+HTTP_REFERER=http://localhost:90/Framework/OpenBio/productos/index
+---
+2014/10/01 19:45:31 [error] [exception.CException] exception 'CException' with message 'La propiedad "Productos"."FichaTecnica" no se encuentra definida.' in C:\wamp\www\Framework\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('FichaTecnica')
+#1 C:\wamp\www\Framework\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('FichaTecnica')
+#2 C:\wamp\www\Framework\yii\framework\web\helpers\CHtml.php(1654): CHtml::resolveValue(Object(Productos), 'FichaTecnica')
+#3 C:\wamp\www\Framework\yii\framework\web\widgets\CActiveForm.php(786): CHtml::activeTextArea(Object(Productos), 'FichaTecnica', Array)
+#4 C:\wamp\www\Framework\OpenBio\protected\views\productos\_form.php(53): CActiveForm->textArea(Object(Productos), 'FichaTecnica', Array)
+#5 C:\wamp\www\Framework\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\Fra...')
+#6 C:\wamp\www\Framework\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\Fra...', Array, true)
+#7 C:\wamp\www\Framework\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\Fra...', Array, true)
+#8 C:\wamp\www\Framework\yii\framework\web\CController.php(782): CController->renderPartial('_form', Array, true)
+#9 C:\wamp\www\Framework\OpenBio\protected\controllers\ProductosController.php(256): CController->render('_form', Array)
+#10 C:\wamp\www\Framework\yii\framework\web\actions\CInlineAction.php(49): ProductosController->actionIndex()
+#11 C:\wamp\www\Framework\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 C:\wamp\www\Framework\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\wamp\www\Framework\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 C:\wamp\www\Framework\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\wamp\www\Framework\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\wamp\www\Framework\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#20 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('productos/index')
+#21 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/Framework/OpenBio/productos/index
+HTTP_REFERER=http://localhost:90/Framework/OpenBio/usuario/adminvitrina
+---
+2014/10/01 20:19:18 [error] [exception.CException] exception 'CException' with message 'La propiedad "Productos"."FichaTecnica" no se encuentra definida.' in C:\wamp\www\Framework\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('FichaTecnica')
+#1 C:\wamp\www\Framework\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('FichaTecnica')
+#2 C:\wamp\www\Framework\yii\framework\web\helpers\CHtml.php(1654): CHtml::resolveValue(Object(Productos), 'FichaTecnica')
+#3 C:\wamp\www\Framework\yii\framework\web\widgets\CActiveForm.php(786): CHtml::activeTextArea(Object(Productos), 'FichaTecnica', Array)
+#4 C:\wamp\www\Framework\OpenBio\protected\views\productos\_form.php(53): CActiveForm->textArea(Object(Productos), 'FichaTecnica', Array)
+#5 C:\wamp\www\Framework\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\Fra...')
+#6 C:\wamp\www\Framework\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\Fra...', Array, true)
+#7 C:\wamp\www\Framework\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\Fra...', Array, true)
+#8 C:\wamp\www\Framework\yii\framework\web\CController.php(782): CController->renderPartial('_form', Array, true)
+#9 C:\wamp\www\Framework\OpenBio\protected\controllers\ProductosController.php(256): CController->render('_form', Array)
+#10 C:\wamp\www\Framework\yii\framework\web\actions\CInlineAction.php(49): ProductosController->actionIndex()
+#11 C:\wamp\www\Framework\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 C:\wamp\www\Framework\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\wamp\www\Framework\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 C:\wamp\www\Framework\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\wamp\www\Framework\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\wamp\www\Framework\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#20 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('productos/index')
+#21 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/Framework/OpenBio/productos/index
+HTTP_REFERER=http://localhost:90/Framework/OpenBio/app/index
+---
+2014/10/01 20:19:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "peticiones" solicitada.' in C:\wamp\www\Framework\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CController.php(270): CController->missingAction('peticiones')
+#1 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): CController->run('peticiones')
+#2 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('evento/peticion...')
+#3 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Framework/OpenBio/evento/peticiones
+HTTP_REFERER=http://localhost:90/Framework/OpenBio/evento/adminagenda
+---
+2014/10/01 20:19:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "peticiones" solicitada.' in C:\wamp\www\Framework\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CController.php(270): CController->missingAction('peticiones')
+#1 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): CController->run('peticiones')
+#2 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('evento/peticion...')
+#3 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Framework/OpenBio/evento/peticiones
+HTTP_REFERER=http://localhost:90/Framework/OpenBio/evento/adminagenda
+---
+2014/10/01 20:20:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "peticiones" solicitada.' in C:\wamp\www\Framework\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CController.php(270): CController->missingAction('peticiones')
+#1 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): CController->run('peticiones')
+#2 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('evento/peticion...')
+#3 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Framework/OpenBio/evento/peticiones
+---
+2014/10/01 20:20:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "app" solicitada.' in C:\wamp\www\Framework\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CController.php(270): CController->missingAction('app')
+#1 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): CController->run('app')
+#2 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('evento/app/inde...')
+#3 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Framework/OpenBio/evento/app/index
+HTTP_REFERER=http://localhost:90/Framework/OpenBio/evento/peticiones
+---
+2014/10/01 20:20:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "app" solicitada.' in C:\wamp\www\Framework\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CController.php(270): CController->missingAction('app')
+#1 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): CController->run('app')
+#2 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('evento/app/app/...')
+#3 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Framework/OpenBio/evento/app/app/index
+HTTP_REFERER=http://localhost:90/Framework/OpenBio/evento/app/index
+---
+2014/10/01 20:20:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "app" solicitada.' in C:\wamp\www\Framework\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CController.php(270): CController->missingAction('app')
+#1 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): CController->run('app')
+#2 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('evento/app/app/...')
+#3 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Framework/OpenBio/evento/app/app/app/index
+HTTP_REFERER=http://localhost:90/Framework/OpenBio/evento/app/app/index
+---
+2014/10/01 20:20:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "app" solicitada.' in C:\wamp\www\Framework\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CController.php(270): CController->missingAction('app')
+#1 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): CController->run('app')
+#2 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('evento/app/app/...')
+#3 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Framework/OpenBio/evento/app/app/app/app/index
+HTTP_REFERER=http://localhost:90/Framework/OpenBio/evento/app/app/app/index
+---
+2014/10/01 20:20:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "index" solicitada.' in C:\wamp\www\Framework\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('evento')
+#3 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Framework/OpenBio/evento/
+---
+2014/10/01 20:21:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "index" solicitada.' in C:\wamp\www\Framework\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('evento')
+#3 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\Framework\OpenBio\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Framework/OpenBio/evento/
+---

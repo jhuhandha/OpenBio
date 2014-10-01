@@ -13,7 +13,7 @@
 		<div class="content">
 			<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/app/img/error-img.png" title="error" />
 			<p><span><label>O</label>hh.....</span>You Requested the page that is no longer There.</p>
-			<a href="#">Back To Home</a>
+			<a href="<?php echo Yii::app()->request->baseUrl; ?>/app/index">Volver al inicio</a>
 			<div class="copy-right">
 				<p>
 					

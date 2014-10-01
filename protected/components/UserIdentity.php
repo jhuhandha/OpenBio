@@ -42,9 +42,11 @@ class UserIdentity extends CUserIdentity
 			$codigoVitrina = Vitrina::model()->find("Usuario_idUsuario = ".$user->idUsuario);
 			$idVitrina = $codigoVitrina != null?$codigoVitrina->idVitrina:0;
 			$numP = $codigoVitrina != null?$codigoVitrina->NumProductos:0;
+			$EstVitrina = $codigoVitrina != null?$codigoVitrina->Estado:0;
 
 			$this->setState("idVitrina",$idVitrina);
 			$this->setState("NumProductos",$numP);
+			$this->setState("EstadoVitrina",$numP);
 			$this->setState("Nombre",$user->Nombre);
 			$this->setState("Url",$user->Foto);
 			$this->setState("Rol",$user->Rol_idRol);

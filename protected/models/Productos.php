@@ -7,7 +7,11 @@
  * @property integer $idProductos
  * @property string $Foto
  * @property string $NombreProducto
- * @property string $FichaTecnica
+ * @property string $DescripcionTecnologia
+ * @property string $PalabrasClaves
+ * @property string $EstadoDesarrollo
+ * @property string $EstadoPL
+ * @property string $InteresComercial
  * @property integer $Vitrina_idVitrina
  * @property integer $Categoria_idCategoria
  *
@@ -33,13 +37,13 @@ class Productos extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('NombreProducto, FichaTecnica, Vitrina_idVitrina, Categoria_idCategoria', 'required'),
+			array('Foto, NombreProducto, DescripcionTecnologia, PalabrasClaves, EstadoDesarrollo, EstadoPL, InteresComercial, Vitrina_idVitrina, Categoria_idCategoria', 'required'),
 			array('Vitrina_idVitrina, Categoria_idCategoria', 'numerical', 'integerOnly'=>true),
 			array('Foto', 'length', 'max'=>80),
 			array('NombreProducto', 'length', 'max'=>60),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idProductos, Foto, NombreProducto, FichaTecnica, Vitrina_idVitrina, Categoria_idCategoria', 'safe', 'on'=>'search'),
+			array('idProductos, Foto, NombreProducto, DescripcionTecnologia, PalabrasClaves, EstadoDesarrollo, EstadoPL, InteresComercial, Vitrina_idVitrina, Categoria_idCategoria', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -65,9 +69,13 @@ class Productos extends CActiveRecord
 			'idProductos' => 'Id Productos',
 			'Foto' => 'Foto',
 			'NombreProducto' => 'Nombre Producto',
-			'FichaTecnica' => 'Ficha Tecnica',
-			'Vitrina_idVitrina' => 'Vitrina',
-			'Categoria_idCategoria' => 'Categoria',
+			'DescripcionTecnologia' => 'Descripcion Tecnologia',
+			'PalabrasClaves' => 'Palabras Claves',
+			'EstadoDesarrollo' => 'Estado Desarrollo',
+			'EstadoPL' => 'Estado Pl',
+			'InteresComercial' => 'Interes Comercial',
+			'Vitrina_idVitrina' => 'Vitrina Id Vitrina',
+			'Categoria_idCategoria' => 'Categoria Id Categoria',
 		);
 	}
 
@@ -92,7 +100,11 @@ class Productos extends CActiveRecord
 		$criteria->compare('idProductos',$this->idProductos);
 		$criteria->compare('Foto',$this->Foto,true);
 		$criteria->compare('NombreProducto',$this->NombreProducto,true);
-		$criteria->compare('FichaTecnica',$this->FichaTecnica,true);
+		$criteria->compare('DescripcionTecnologia',$this->DescripcionTecnologia,true);
+		$criteria->compare('PalabrasClaves',$this->PalabrasClaves,true);
+		$criteria->compare('EstadoDesarrollo',$this->EstadoDesarrollo,true);
+		$criteria->compare('EstadoPL',$this->EstadoPL,true);
+		$criteria->compare('InteresComercial',$this->InteresComercial,true);
 		$criteria->compare('Vitrina_idVitrina',$this->Vitrina_idVitrina);
 		$criteria->compare('Categoria_idCategoria',$this->Categoria_idCategoria);
 
