@@ -197,48 +197,52 @@ var productos = {
       }).done(function (data, textStatus, jqXHR) {
          var arrdata = [];
          var array = data.result;
+         var bloques = '';
+         var texto = "";
           
          $.each(array, function(index,obj){
-              arrdata.push(['<img id="imgThumb" src="'+obj.Foto+'" style="height: 150px;  width: 200px;"/>', obj.NombreProducto, obj.Categoria, obj.FichaTecnica, '<a class="btn btn-warning" onclick="productos.SelectCampos('+"'"+obj.idProductos+"'"+','+"'"+obj.Foto+"'"+','+"'"+obj.NombreProducto+"'"+','+"'"+obj.FichaTecnica+"'"+','+"'"+obj.idCategoria+"'"+')" id="Modify1">Modificar</a>']);
+
+               texto += "<br><b>Categoria</b><p>"+obj.Categoria+"</p>";
+               texto += "<b>Descripcion Tecnologia</b><br><p>"+obj.DescripcionTecnologia+"</p>";
+               texto += "<b>Palabras Claves</b><br><p>"+obj.PalabrasClaves+"</p>";
+               texto += "<b>Estado Desarrollo</b><br><p>"+obj.EstadoDesarrollo+"</p>";
+               texto += "<b>Estado Pl</b><br><p>"+obj.EstadoPL+"</p>";
+               texto += "<b>Interes Comercial</b><br><p>"+obj.InteresComercial+"</p>";
+
+               bloques += '<div class="col-md-6 col-sm-6">';
+               bloques += '<div class="block-text rel zmin">';
+               bloques += '<a title="" href="#" ><p class="text-center">'+obj.NombreProducto+'</p></a>';
+               bloques += texto;
+               bloques += '<ins class="ab zmin sprite sprite-i-triangle block"></ins>';
+               bloques += '</div>';
+               bloques += '<div class="person-text rel">';
+               bloques += '<img class="img-circle" src="'+obj.Foto+'" style="width: 100px;height:100px;">';
+               bloques += '<a href="#" onclick="productos.SelectCampos('+"'"+obj.idProductos+"'"+','+"'"+obj.Foto+"'"+','+"'"+obj.NombreProducto+"'"+','+"'"+obj.DescripcionTecnologia+"'"+','+"'"+obj.PalabrasClaves+"'"+','+"'"+obj.EstadoDesarrollo+"'"+','+"'"+obj.EstadoPL+"'"+','+"'"+obj.InteresComercial+"'"+','+"'"+obj.idCategoria+"'"+')" id="Modify1">Modificar</a>';
+               bloques += '</div></div>';
+
+               texto = "";
          });
 
-         $('#dynamicProductos').html( '<table class="table table-hover table-condensed" id="tblProductos"></table>' );
-              $('#tblProductos').dataTable( {
-                "oLanguage": resource.lenguajeTable(),
-                  "aaData": arrdata,
-                  "aoColumns": [
-                  { "sTitle": "Foto" , "sClass": "col-md-2 col-sm-2"},                        
-                  { "sTitle": "Nombre" },                        
-                  { "sTitle": "Categoria" },                        
-                  { "sTitle": "Ficha tecnica" },                        
-                  { "sTitle": "Administrar" , "sClass": "col-md-2 col-sm-2"}                          
-                  ]
-              });
-
-          $('#tblProductos').each(function(){
-            var datatable = $(this);
-                // Buscar - Add the placeholder for Buscar and Turn this into in-line form control
-                var Buscar_input = datatable.closest('.dataTables_wrapper').find('div[id$=_filter] input');
-                Buscar_input.attr('placeholder', 'Buscar');
-                Buscar_input.addClass('form-control');
-                // LENGTH - Inline-Form control
-                var length_sel = datatable.closest('.dataTables_wrapper').find('div[id$=_length] select');
-                length_sel.addClass('form-control');
-          });
+         $('#dynamicProductos').html(bloques);
 
       }).fail(function (qXHR, textStatus, errorThrown) {
           alert("error");
       });
   },
-  SelectCampos:function(id, foto, nombre, ficha, idcategoria){
+  SelectCampos:function(id, foto, nombre, descripcion, palabras, estadodesarrollo, estadool, interes,  idcategoria){
+
     $('#txtNombre').val(nombre);
     $('#ddlCategoria').val(idcategoria);
-    $('#txtFichaTecnica').text(ficha);
+    $('#txtDescripcionTecnologia').text(descripcion);
+    $('#txtPalabrasClaves').text(palabras);
+    $('#txtEstadoDesarrollo').text(estadodesarrollo);
+    $('#txtEstadoPL').text(estadool);
+    $('#txtInteresComercial').text(interes);
+
     $('#list').html("<span><img id='imgThumb' src='"+foto+"' class='thumb'/></span>");
 
     $('#txtCodigo').val(id);
  
-
     $('#btnModificar').removeAttr("disabled");
     $('#btnModificar').attr("onclick",'javascript: productos.ModificarProducto("productos-form");');
     $('#btnGuardar').attr("disabled",true);
@@ -252,8 +256,14 @@ var productos = {
 
     var valor = "";
     $("#ddlCategoria option").val("");
-    $('#txtFichaTecnica').val('');
+    $('#txtDescripcionTecnologia').val('');
+    $('#txtPalabrasClaves').val('');
+    $('#txtEstadoDesarrollo').val('');
+    $('#txtEstadoPL').val('');
+    $('#txtInteresComercial').val('');
     $('#imgThumb').remove();
+    $('#files').val();
+    $('#files').attr({ value: '' });  
 
     $('#btnModificar').attr("disabled");
     $('#btnModificar').removeAttr("onclick");

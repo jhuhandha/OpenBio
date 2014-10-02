@@ -3508,3 +3508,20 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/Framework/OpenBio/evento/
 ---
+2014/10/02 01:55:16 [error] [php] str_repeat() expects exactly 2 parameters, 3 given (C:\wamp\www\Framework\OpenBio\protected\controllers\ProductosController.php:102)
+Stack trace:
+#0 C:\wamp\www\Framework\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(133): ProductosController->runAction()
+#2 C:\wamp\www\Framework\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\Framework\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\wamp\www\Framework\yii\framework\web\filters\CInlineFilter.php(58): ProductosController->filterAccessControl()
+#5 C:\wamp\www\Framework\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\wamp\www\Framework\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\Framework\yii\framework\web\CController.php(265): ProductosController->runActionWithFilters()
+#8 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(282): ProductosController->run()
+#9 C:\wamp\www\Framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\wamp\www\Framework\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\Framework\OpenBio\index.php(13): CWebApplication->run()
+REQUEST_URI=/Framework/OpenBio/productos/Create
+in C:\wamp\www\Framework\OpenBio\protected\controllers\ProductosController.php (102)
+in C:\wamp\www\Framework\OpenBio\index.php (13)
