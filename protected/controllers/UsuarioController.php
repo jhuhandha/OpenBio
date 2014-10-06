@@ -59,91 +59,87 @@ class UsuarioController extends Controller
 	 */
 	public function actionCreate()
 	{
-		if(!Yii::app()->user->isGuest){
-			$model=new Usuario;
+		$model=new Usuario;
 
-			// Uncomment the following line if AJAX validation is needed
-			// $this->performAjaxValidation($model);
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
 
-			if(isset($_POST["Usuario"]) && isset($_FILES["Usuario"]))
-			{
-				$allowedExts = array("gif", "jpeg", "jpg", "png");
-				$temp = explode(".", $_FILES["Usuario"]["name"]["Foto"]);
-				$extension = end($temp);
+		if(isset($_POST["Usuario"]) && isset($_FILES["Usuario"]))
+		{
+			$allowedExts = array("gif", "jpeg", "jpg", "png");
+			$temp = explode(".", $_FILES["Usuario"]["name"]["Foto"]);
+			$extension = end($temp);
 
-				$m=Usuario::model()->find("1 = 1 ORDER BY idUsuario DESC");
-				$nombre = $m->idUsuario + 1;
-				$nombre =  (string)$nombre.".".$extension;
-				$imagen = false;
-				
-				if ((($_FILES["Usuario"]["type"]["Foto"] == "image/gif")
-				|| ($_FILES["Usuario"]["type"]["Foto"] == "image/jpeg")
-				|| ($_FILES["Usuario"]["type"]["Foto"] == "image/jpg")
-				|| ($_FILES["Usuario"]["type"]["Foto"] == "image/pjpeg")
-				|| ($_FILES["Usuario"]["type"]["Foto"] == "image/x-png")
-				|| ($_FILES["Usuario"]["type"]["Foto"] == "image/png"))
-				&& in_array($extension, $allowedExts)) {
-	  				if ($_FILES["Usuario"]["error"]["Foto"] > 0) {
-	    				echo "Return Code: " . $_FILES["Usuario"]["error"]["Foto"] . "<br>";
-	  				} else {
-					    if (!file_exists(Yii::app()->request->baseUrl."/assets/upload/usuarios/" . $_FILES["Usuario"]["name"]["Foto"])) {
-						    move_uploaded_file($_FILES["Usuario"]["tmp_name"]["Foto"],"assets/upload/usuarios/" . $nombre);
-						    $imagen = true;
-					    }
-	  				}
-				} else {
-				  	echo "Invalid file";
-				}
-				if($imagen){
-					$model->Foto=$nombre;
-					$model->Nombre=$_POST["Usuario"]['Nombre'];
-					$model->Apellido=$_POST["Usuario"]['Apellido'];
-					$model->NombreEmpresa=$_POST["Usuario"]['NombreEmpresa'];
-					$model->Email=$_POST["Usuario"]['Email'];
-					$model->Celular=$_POST["Usuario"]['Celular'];
-					$model->Direccion=$_POST["Usuario"]['Direccion'];
-					$model->Usuario=$_POST["Usuario"]['Usuario'];
-					$model->Clave=$_POST["Usuario"]['Clave'];
-					$model->Nombre=$_POST["Usuario"]['Nombre'];
-					$model->Rol_idRol="1";
+			$m=Usuario::model()->find("1 = 1 ORDER BY idUsuario DESC");
+			$nombre = $m->idUsuario + 1;
+			$nombre =  (string)$nombre.".".$extension;
+			$imagen = false;
+			
+			if ((($_FILES["Usuario"]["type"]["Foto"] == "image/gif")
+			|| ($_FILES["Usuario"]["type"]["Foto"] == "image/jpeg")
+			|| ($_FILES["Usuario"]["type"]["Foto"] == "image/jpg")
+			|| ($_FILES["Usuario"]["type"]["Foto"] == "image/pjpeg")
+			|| ($_FILES["Usuario"]["type"]["Foto"] == "image/x-png")
+			|| ($_FILES["Usuario"]["type"]["Foto"] == "image/png"))
+			&& in_array($extension, $allowedExts)) {
+  				if ($_FILES["Usuario"]["error"]["Foto"] > 0) {
+    				echo "Return Code: " . $_FILES["Usuario"]["error"]["Foto"] . "<br>";
+  				} else {
+				    if (!file_exists(Yii::app()->request->baseUrl."/assets/upload/usuarios/" . $_FILES["Usuario"]["name"]["Foto"])) {
+					    move_uploaded_file($_FILES["Usuario"]["tmp_name"]["Foto"],"assets/upload/usuarios/" . $nombre);
+					    $imagen = true;
+				    }
+  				}
+			} else {
+			  	echo "Invalid file";
+			}
+			
+			if($imagen){
+				$model->Foto=$nombre;
+				$model->Nombre=$_POST["Usuario"]['Nombre'];
+				$model->Apellido=$_POST["Usuario"]['Apellido'];
+				$model->NombreEmpresa=$_POST["Usuario"]['NombreEmpresa'];
+				$model->Email=$_POST["Usuario"]['Email'];
+				$model->Celular=$_POST["Usuario"]['Celular'];
+				$model->Direccion=$_POST["Usuario"]['Direccion'];
+				$model->Usuario=$_POST["Usuario"]['Usuario'];
+				$model->Clave=$_POST["Usuario"]['Clave'];
+				$model->Nombre=$_POST["Usuario"]['Nombre'];
+				$model->Rol_idRol="1";
+				$model->CategoriaUsuario_idCategoriaUsuario=$_POST["Usuario"]['CategoriaUsuario_idCategoriaUsuario'];
 
-					try{
-						if($model->save()){
-							$count = 0;
-							foreach ($_POST["Interes"] as $value) {
-								$interes = new UsuarioInteres;
-								$interes->Interes_idInteres = $value;
-								$interes->Usuario_idUsuario = $model->idUsuario;
-								if($interes->save()){
-									$count ++;
-								}
+				try{
+					if($model->save()){
+						$count = 0;
+						foreach ($_POST["Interes"] as $value) {
+							$interes = new UsuarioInteres;
+							$interes->Interes_idInteres = $value;
+							$interes->Usuario_idUsuario = $model->idUsuario;
+							if($interes->save()){
+								$count ++;
 							}
-							if(count($_POST["Interes"]) == $count){
-								$v = new Vitrina;
-								$v->Usuario_idUsuario = $model->idUsuario;
-								$v->Estado = 0;
-								if($v->save()){
-									echo "1";
-								}else{
-									echo "2";
-								}
+						}
+						if(count($_POST["Interes"]) == $count){
+							$v = new Vitrina;
+							$v->Usuario_idUsuario = $model->idUsuario;
+							$v->Estado = 0;
+							if($v->save()){
+								echo "1";
 							}else{
 								echo "2";
 							}
 						}else{
-							echo "3";
+							echo "2";
 						}
-					}catch(Exception $e){
-						echo $e->getMessage();
+					}else{
+						echo "3";
 					}
-
+				}catch(Exception $e){
+					echo $e->getMessage();
 				}
-			}
-		}else
-		{
-			$this->redirect(array('/login/login'));
-		}
 
+			}
+		}
 	}
 
 

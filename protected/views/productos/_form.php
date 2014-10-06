@@ -15,6 +15,21 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
+	<?php 
+		if(Yii::app()->user->getState("EstadoVitrina") == 0){
+	?>
+		<div class="alert alert-warning fade in" role="alert">
+	      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+	      <h4>Advertencia</h4>
+	      <p>Debes pagar para convertirte en vitrina, para asi sean visibles los productos.</p>
+	      <p><a target="_blank" href="https://docs.google.com/a/biointropic.com/forms/d/10umv38sFOMQz9hi8t7ahjzixxDjkG7KVtDBXHNDI3uU/viewform?c=0&w=1&usp=mail_form_link
+	" class="btn btn-default">Enviar peticion</a></p>
+	    </div>
+	<?php
+	}
+	?>
+
+
 	<p class="note">Campos <span class="required">*</span> requeridos.</p>
 		
 		<div class="row">
@@ -48,7 +63,7 @@
 						<div class="form-group">
 							<input type="hidden" name="txtCodigo" id="txtCodigo">
 							<?php echo $form->labelEx($model,'DescripcionTecnologia'); ?>
-							<?php echo $form->textArea($model,'DescripcionTecnologia',array('id'=>'txtDescripcionTecnologia', 'data-parsley-required'=>'true' , 'rows'=>8, 'cols'=>100,'class'=>'form-control', 'style'=>'resize:none', 'data-parsley-pattern'=>'/(?!^[a-z A-Z]*$)^([0-9]{0,100000})$/' )); ?>
+							<?php echo $form->textArea($model,'DescripcionTecnologia',array('id'=>'txtDescripcionTecnologia', 'data-parsley-required'=>'true' , 'rows'=>8, 'cols'=>100,'class'=>'form-control', 'style'=>'resize:none')); ?>
 							<?php echo $form->error($model,'DescripcionTecnologia'); ?>
 						</div>
 					</div>

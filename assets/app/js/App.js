@@ -85,12 +85,11 @@ var usuario = {
               processData: false
           }).done(function(data){
             if(data=="1"){
-              alert("Datos registrados con exito");
-              location.href = "usuario/index";
+              resource.notify('En hora buena','Se guardo la información','success','glyphicon glyphicon-ok');              
             }else if(data=="2"){
-              alert("No se pudo registrar los datos");
+              resource.notify('Upss','Ha ocurrido un error','error', 'glyphicon glyphicon-remove');
             }else{
-              alert(data);
+              resource.notify('Upss',data,'error', 'glyphicon glyphicon-remove');
             }
           });
       }

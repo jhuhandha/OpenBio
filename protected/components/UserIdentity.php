@@ -45,9 +45,12 @@ class UserIdentity extends CUserIdentity
 			$numP = $codigoVitrina != null?$codigoVitrina->NumProductos:0;
 			$EstVitrina = $codigoVitrina != null?$codigoVitrina->Estado:0;
 
+			// print_r($codigoVitrina);
+			// exit;
+
 			$this->setState("idVitrina",$idVitrina);
 			$this->setState("NumProductos",$numP);
-			$this->setState("EstadoVitrina",$numP);
+			$this->setState("EstadoVitrina",$EstVitrina);
 			$this->setState("Nombre",$user->Nombre);
 			$this->setState("Url",$user->Foto);
 			$this->setState("Rol",$user->Rol_idRol);

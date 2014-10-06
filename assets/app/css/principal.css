@@ -1,0 +1,601 @@
+*{
+	margin: 0; 
+	padding: 0;
+}
+
+@font-face{
+	font-family: "NexaBold";
+	src:url(fuentes/NexaBold.otf);
+}
+
+@font-face{
+	font-family: "NexaLight";
+	src:url(fuentes/NexaLight.otf);
+}
+
+body{
+	height: 100%;
+}
+
+#contain1{;
+	background: url(../img/writing-336370_1280.jpg) fixed;
+    box-shadow: 0 0 20px #000;
+	/*background-position: 0 px;*/
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 720px;
+	width: 100%;
+}
+
+.hoja{
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+}
+
+#pre-header{
+	height: 170px;
+}
+
+#pre-header .hoja nav#menu{
+	left: 40%;
+	position: relative;
+	top: 60px;
+	width: 500px;
+}
+
+#pre-header .hoja nav#menu a{
+	color: #fff;
+	font-family: "NexaLight";
+	font-size: 12pt;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-weight: 100;
+	text-decoration: none;
+}
+
+#pre-header .hoja nav#menu a:hover{
+	color: #92c822;
+}
+
+#pre-header .hoja form#login-form{
+	display: inline-table;
+	left: 83%;
+	position: relative;
+	top: 10px;
+	width: 200px;
+}
+
+#pre-header .hoja form#login-form input{
+	background-color: #0699d7;
+	border: none;
+	color: #fff;
+	font-family: "NexaLight";
+	height: 25px;
+	margin-bottom: 7px;
+	padding-left: 10px;
+	width: 100%;
+}
+
+#pre-header .hoja form#login-form input::-webkit-input-placeholder {
+    color: #fff;
+}
+
+#pre-header .hoja form#login-form input:focus{
+	border: 2px solid #fff; 
+}
+
+#pre-header .hoja form#login-form input#btn-enviar{
+	background-color: #92c822;
+	color: #fff;
+	font-size: 12pt;
+	float: right;
+	right: 20px;
+	margin-right: 10px;
+	padding: 5px;
+	width: 60.3%;
+}
+
+#pre-header .hoja form#login-form #reguistrar{
+	background-color: #92c822;
+	float: right;
+	left: 6px;
+	margin-right: 10px;
+	padding-top:3px;
+	padding-bottom: 3px;
+	width: 60.3%;
+} 
+
+#reguistrar a{
+	color: #fff;
+	font-family: "NexaLight";
+	padding-left:15px; 
+	text-decoration: none;
+} 
+
+header{
+	background-color:rgba(255,255,255,0.7); 
+	padding: 20px;
+}
+
+header .hoja figure{;
+	margin-left: auto;
+	margin-right: auto;
+	width: 860px; 
+}
+
+header .hoja figure img{
+	margin-left: 60px;
+	margin-right: 60px;
+	width: 300px;
+}
+
+header .hoja figure img:nth-child(2){
+	position: relative;
+	bottom: 20px;
+}
+
+nav#menu2{
+	background-color: rgba(146,200,34,0.5);
+	padding-top: 20px;
+	padding-bottom: 20px;
+	position: relative;
+	top: 120px;
+}
+
+nav#menu2 .hoja a, img{
+	margin-left: 35px;
+	margin-left: 35px;
+	text-decoration: none;
+}
+
+nav#menu2 .hoja span{
+	color: #fff;
+	font-family: "NexaBold";
+	font-size: 12pt;
+	position: relative;
+	/*right: 98px;*/
+	top: 13px;
+}
+
+nav#menu2 .hoja span:hover{
+	color: #002f7a;
+}
+
+
+nav#menu2 .hoja a span#uno{
+	position: relative;
+	right: 110px;
+}
+
+nav#menu2 .hoja a span#dos{
+	position: relative;
+	right: 96px;
+}
+
+nav#menu2 .hoja a span#tres{
+	position: relative;
+	right: 110px;
+}
+
+nav#menu2 .hoja a span#cuatro{
+	position: relative;
+	right: 96px;
+}
+
+nav#menu2 .hoja a img{
+	border-radius: 100px;
+	transition: 0.5s all;
+}
+
+nav#menu2 .hoja a img:hover{
+	transition:1s all;
+	background-color: #92c822;
+}
+
+h2#part{
+	background-color: rgba(237,125,3,0.7);
+	box-shadow: 0 0 20px #000;
+	bottom: 30px;
+	color: #fff;
+	font-family: "NexaBold";
+	position: relative;
+	padding: 10px;
+	text-align: center;
+	z-index: 2;
+}
+
+#contain2{
+	background: url(../img/Tidy-Work-Desk-With-Laptop-Phone-Book-And-Pen.jpg) fixed;
+	box-shadow: 0 0 20px #000;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height:460px;
+	position: relative;
+	bottom: 60px;
+	width: 50%;
+}
+
+#contain2 .hoja article#S{
+	background: url(../img/articleS.png);
+	background-position: 5px 5px;
+	border-radius: 100px;
+	height: 200px;
+	left: 180px;
+	position: relative;
+	top: 140px;
+	width: 200px;
+	transition:0.5s all;
+}
+
+#contain2 .hoja article#S:hover{
+	transition:1s all;
+	background: url(../img/articleS2.png) no-repeat;
+	background-position: 5px 5px;
+	box-shadow: 0 0 20px #666;
+}
+
+#contain3{
+	background: url(../img/office-272813_1280.jpg) fixed;
+	box-shadow: 0 0 20px #000;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height:460px;
+	position: relative;
+	left:50%;
+	bottom: 520px;
+	width: 50%;
+}
+
+#contain3 .hoja article#G{
+	background: url(../img/articleG.png);
+	background-position: 5px 5px;
+	border-radius: 100px;
+	height: 200px;
+	left: 180px;
+	position: relative;
+	top: 140px;
+	width: 200px;
+	transition:0.5s all;
+}
+
+#contain3 .hoja article#G:hover{
+	transition:1s all;
+	background: url(../img/articleG2.png) no-repeat;
+	background-position: 5px 5px;
+	box-shadow: 0 0 20px #666;
+}
+
+aside{
+	position: relative;
+	bottom: 500px;
+}
+
+aside .hoja  article#orgaPor{
+	height: 1170px;
+}
+
+aside .hoja  article#orgaPor h2{
+	background-color: #002f7a;
+    font-family: "NexaBold";
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    text-align: center;
+    width: 280px;
+}
+
+aside .hoja  article#orgaPor figure:nth-child(2){
+	border: 4px solid rgba(155,162,172,0.5);
+	border-radius: 100%;
+	box-shadow: 0 0 10px #ccc;
+	height: 160px;
+	position: relative;
+	top: 50px;
+	margin: 0 auto;
+	width: 160px;
+}
+
+aside .hoja  article#orgaPor figure:nth-child(2) img{
+	left: -23px;
+	position: relative;
+	top:47px;
+	width: 130px;
+}
+
+
+aside .hoja  article#orgaPor figcaption#uno{
+	background: #fff;
+	box-shadow: 0 0 10px #ccc;
+	border-radius: 4px;
+	bottom: 220px;
+	left: 130px;
+	padding: 5px;
+	position: relative;
+	text-align: right;
+	width: 300px;
+}
+
+.linea1{
+	background-color: #ccc;
+	height: 140px;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	top: 50px;
+	width: 5px;
+}
+
+
+aside .hoja  article#orgaPor figure:nth-child(5){
+	border: 4px solid rgba(155,162,172,0.5);
+	border-radius: 100%;
+	box-shadow: 0 0 10px #ccc;
+	bottom: 40px;
+	height: 160px;
+	position: relative;
+	margin: 0 auto;
+	width: 160px;
+}
+
+aside .hoja  article#orgaPor figure:nth-child(5) img{
+	left: -15px;
+	position: relative;
+	top:48px;
+	width: 130px;
+}
+
+aside .hoja  article#orgaPor figcaption#dos{
+	background: #fff;
+	box-shadow: 0 0 10px #ccc;
+	border-radius: 4px;
+	bottom: 300px;
+	left: 715px;
+	padding: 5px;
+	position: relative;
+	text-align: left;
+	width: 300px;
+}
+
+.linea2{
+	background-color: #ccc;
+	height: 140px;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	bottom: 40px;
+	width: 5px;
+}
+
+aside .hoja  article#orgaPor figure:nth-child(8){
+	border: 4px solid rgba(155,162,172,0.5);
+	border-radius: 100%;
+	box-shadow: 0 0 10px #ccc;
+	bottom: 130px;
+	height: 160px;
+	position: relative;
+	margin: 0 auto;
+	width: 160px;
+}
+
+aside .hoja  article#orgaPor figure:nth-child(8) img{
+	left: -19px;
+	position: relative;
+	top:60px;
+	width: 130px;
+}
+
+aside .hoja  article#orgaPor figcaption#tres{
+	box-shadow: 0 0 10px #ccc;
+	border-radius: 4px;
+	bottom: 395px;
+	left: 130px;
+	padding: 5px;
+	position: relative;
+	text-align: right;
+	width: 300px;
+}
+
+.linea3{
+	background-color: #ccc;
+	height: 140px;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	bottom: 127px;
+	width: 5px;
+}
+
+aside .hoja  article#orgaPor figure:nth-child(11){
+	border: 4px solid rgba(155,162,172,0.5);
+	border-radius: 100%;
+	box-shadow: 0 0 10px #ccc;
+	bottom: 218px;
+	height: 160px;
+	position: relative;
+	margin: 0 auto;
+	width: 160px;
+}
+
+aside .hoja  article#orgaPor figure:nth-child(11) img{
+	left: -15px;
+	position: relative;
+	top:48px;
+	width: 130px;
+}
+
+aside .hoja  article#orgaPor figcaption#cuatro{
+	background: #fff;
+	box-shadow: 0 0 10px #ccc;
+	border-radius: 4px;
+	bottom: 350px;
+	left: 715px;
+	padding: 5px;
+	position: relative;
+	text-align: left;
+	width: 300px;
+}
+
+
+
+/*--------*/
+
+aside .hoja  article#asicioPor{
+	height: 190px;
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	top: 40px;
+	width: 970px;
+}
+
+aside .hoja  article#asicioPor h2{
+	background-color: #002f7a;
+    font-family: "NexaBold";
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    text-align: center;
+    width: 280px;
+}
+
+aside .hoja  article#asicioPor figure{
+	display: inline-table;
+	margin-left:10px;
+	margin-right: 10px;
+	transition:0.5s all;
+}
+
+aside .hoja  article#asicioPor figure:hover{
+	transition:0.8s all;
+	-webkit-transform:scale(1.1,1.1);
+}
+
+aside .hoja  article#asicioPor figure:nth-child(2){
+	border-radius: 100%;
+	box-shadow: 0 0 10px #cec8c8;
+	height: 110px;
+	position: relative;
+	top: 50px;
+	width: 110px;
+}
+
+aside .hoja  article#asicioPor figure:nth-child(2) img{
+	left: -20px;
+	position: relative;
+	top: 20px;
+	width: 80px;
+}
+
+aside .hoja  article#asicioPor figure:nth-child(3){
+	border-radius: 100%;
+	box-shadow: 0 0 10px #cec8c8;
+	height: 110px;
+	position: relative;
+	top: 17px;
+	width: 110px;
+}
+
+aside .hoja  article#asicioPor figure:nth-child(3) img{
+	left: -20px;
+	position: relative;
+	top: 40px;
+	width: 80px;
+}
+
+aside .hoja  article#asicioPor figure:nth-child(4){
+	border-radius: 100%;
+	box-shadow: 0 0 10px #cec8c8;
+	height: 110px;
+	position: relative;
+	top: 46px;
+	width: 110px;
+}
+
+aside .hoja  article#asicioPor figure:nth-child(4) img{
+	left: -20px;
+	position: relative;
+	top: 20px;
+	width: 80px;
+}
+
+aside .hoja  article#asicioPor figure:nth-child(5){
+	border-radius: 100%;
+	box-shadow: 0 0 10px #cec8c8;
+	height: 110px;
+	position: relative;
+	top: 56px;
+	width: 110px;
+}
+
+aside .hoja  article#asicioPor figure:nth-child(5) img{
+	left: -18px;
+	position: relative;
+	top: 20px;
+	width: 80px;
+}
+
+aside .hoja  article#asicioPor figure:nth-child(6){
+	border-radius: 100%;
+	box-shadow: 0 0 10px #cec8c8;
+	height: 110px;
+	position: relative;
+	top: 45px;
+	width: 110px;
+}
+
+aside .hoja  article#asicioPor figure:nth-child(6) img{
+	left: -17px;
+	position: relative;
+	top: 20px;
+	width: 80px;
+}
+
+aside .hoja  article#asicioPor figure:nth-child(7){
+	border-radius: 100%;
+	box-shadow: 0 0 10px #cec8c8;
+	height: 110px;
+	position: relative;
+	top: 29px;
+	width: 110px;
+}
+
+aside .hoja  article#asicioPor figure:nth-child(7) img{
+	left: -17px;
+	position: relative;
+	top: 40px;
+	width: 80px;
+}
+
+aside .hoja  article#asicioPor figure:nth-child(8){
+	border-radius: 100%;
+	box-shadow: 0 0 10px #cec8c8;
+	height: 110px;
+	position: relative;
+	top: 70px;
+	width: 110px;
+}
+
+aside .hoja  article#asicioPor figure:nth-child(8) img{
+	left: -16px;
+	position: relative;
+	top: 10px;
+	width: 70px;
+}
+
+footer{
+	bottom: 330px;
+	height: 70px;
+	background-color:#b1b2b7; 
+	position: relative;
+}
+
+footer #logo{
+	background-color: #002f7a;
+	height: 71px;
+	position: absolute;
+	right: 0;
+	width: 200px;
+}

@@ -4,8 +4,6 @@
 /* @var $form CActiveForm */
 ?>
 
-<div class="form">
-
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'usuario-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
@@ -17,97 +15,65 @@
 )); ?>
 <?php echo $form->errorSummary($model); ?>
 
-	<p class="note">Campos <span class="required">*</span> requeridos</p>
-	<div class="container" style="width:80%">
-		<div class="row">
-			<div class="col-md-5">
-				<?php echo $form->labelEx($model,'Foto'); ?>
-				  <div class="col-sm-12 col-md-12">
-				    <div class="thumbnail">
-				      <output id="list"></output>
-				      <div class="caption">
-				       	
-						<?php echo $form->fileField($model,'Foto',array('size'=>60,'maxlength'=>80,'id'=>'files', 'data-parsley-required'=>'true')); ?>
-						<?php echo $form->error($model,'Foto'); ?>
-				      </div>
-				    </div>
-				  </div>
-			</div>
-			<div class="col-md-7">
-				
-				<div class="form-group">
-					<?php echo $form->labelEx($model,'Nombre'); ?>
-					<?php echo $form->textField($model,'Nombre',array('class'=>'form-control','size'=>30,'maxlength'=>30, 'data-parsley-required'=>'true')); ?>
-					<?php echo $form->error($model,'Nombre'); ?>
-				</div>
+    <article id="imagen">
+        <h2>Foto</h2>
+		<output id="list"></output>
+	    <div class="caption">
+	       	<?php echo $form->fileField($model,'Foto',array('size'=>60,'maxlength'=>80,'id'=>'files', 'data-parsley-required'=>'true')); ?>
 
-				<div class="form-group">
-					<?php echo $form->labelEx($model,'Apellido'); ?>
-					<?php echo $form->textField($model,'Apellido',array('class'=>'form-control','size'=>40,'maxlength'=>40, 'data-parsley-required'=>'true')); ?>
-					<?php echo $form->error($model,'Apellido'); ?>
-				</div>
+	    </div>
+    </article>
 
-				<div class="form-group">
-					<?php echo $form->labelEx($model,'NombreEmpresa'); ?>
-					<?php echo $form->textField($model,'NombreEmpresa',array('class'=>'form-control','size'=>45,'maxlength'=>45)); ?>
-					<?php echo $form->error($model,'NombreEmpresa'); ?>
-				</div>
+    <article id="form">
 
-				<div class="form-group">
-					<?php echo $form->labelEx($model,'Email'); ?>
-					<?php echo $form->textField($model,'Email',array('class'=>'form-control','size'=>30,'maxlength'=>30, 'data-parsley-required'=>'true', 'data-parsley-type'=>'email')); ?>
-					<?php echo $form->error($model,'Email'); ?>
-				</div>
 
-				<div class="form-group">
-					<?php echo $form->labelEx($model,'Celular'); ?>
-					<?php echo $form->textField($model,'Celular',array('class'=>'form-control','size'=>15,'maxlength'=>15, 'data-parsley-required'=>'true', 'data-parsley-type'=>'integer')); ?>
-					<?php echo $form->error($model,'Celular'); ?>
-				</div>
+		<?php echo $form->labelEx($model,'Nombre'); ?>
+		<?php echo $form->textField($model,'Nombre',array('class'=>'form-control','size'=>30,'maxlength'=>30, 'data-parsley-required'=>'true')); ?>
 
-				<div class="form-group">
-					<?php echo $form->labelEx($model,'Direccion'); ?>
-					<?php echo $form->textField($model,'Direccion',array('class'=>'form-control','size'=>40,'maxlength'=>40, 'data-parsley-required'=>'true')); ?>
-					<?php echo $form->error($model,'Direccion'); ?>
-				</div>
+		<?php echo $form->labelEx($model,'Apellido'); ?>
+		<?php echo $form->textField($model,'Apellido',array('class'=>'form-control','size'=>40,'maxlength'=>40, 'data-parsley-required'=>'true')); ?>
 
-				<div class="form-group">
-					<?php echo $form->labelEx($model,'Usuario'); ?>
-					<?php echo $form->textField($model,'Usuario',array('class'=>'form-control','size'=>50,'maxlength'=>50, 'data-parsley-required'=>'true')); ?>
-					<?php echo $form->error($model,'Usuario'); ?>
-				</div>
+		<?php echo $form->labelEx($model,'NombreEmpresa'); ?>
+		<?php echo $form->textField($model,'NombreEmpresa',array('class'=>'form-control','size'=>45,'maxlength'=>45)); ?>
 
-				<div class="form-group">
-					<?php echo $form->labelEx($model,'Clave'); ?>
-					<?php echo $form->passwordField($model,'Clave',array('class'=>'form-control','size'=>60,'maxlength'=>60, 'data-parsley-required'=>'true')); ?>
-					<?php echo $form->error($model,'Clave'); ?>
-				</div>
-				<div class="checkbox">			
-					<?php echo CHtml::checkBoxList('Interes',"", CHtml::listData(Interes::model()->findAll(), 'idInteres','NombreIntere'), array('class'=>'checkbox-inline'))?>
-				</div>
+		<?php echo $form->labelEx($model,'Email'); ?>
+		<?php echo $form->textField($model,'Email',array('class'=>'form-control','size'=>30,'maxlength'=>30, 'data-parsley-required'=>'true', 'data-parsley-type'=>'email')); ?>
 
-				<div class="form-group buttons">
-					 <?php  echo CHtml::htmlButton('Enviar',array(
-			                'onclick'=>'javascript: usuario.CrearUsuario("usuario-form");', // on submit call JS send() function
-			                'id'=> 'post-submit-btn', // button id
-			                'class'=>'btn btn-success',
-			            ));
-			    	?>
-				</div>
-			</div>
-		</div>
-	</div>
-	
+		<?php echo $form->labelEx($model,'Celular'); ?>
+		<?php echo $form->textField($model,'Celular',array('class'=>'form-control','size'=>15,'maxlength'=>15, 'data-parsley-required'=>'true', 'data-parsley-type'=>'integer')); ?>
+
+		<?php echo $form->labelEx($model,'Direccion'); ?>
+		<?php echo $form->textField($model,'Direccion',array('class'=>'form-control','size'=>40,'maxlength'=>40, 'data-parsley-required'=>'true')); ?>
+
+		<?php echo $form->labelEx($model,'CategoriaUsuario_idCategoriaUsuario'); ?>
+		<?php echo $form->dropDownList($model,"CategoriaUsuario_idCategoriaUsuario",CHtml::listData(Categoria::model()->findAll(), 'idCategoria', 'NombreCategoria'), array('empty' => 'Seleccionar','id'=>'ddlCategoria', 'class'=>'form-control', 'data-parsley-required'=>'true'));?>
+
+		<?php echo $form->labelEx($model,'Usuario'); ?>
+		<?php echo $form->textField($model,'Usuario',array('class'=>'form-control','size'=>50,'maxlength'=>50, 'data-parsley-required'=>'true')); ?>
+
+		<?php echo $form->labelEx($model,'Clave'); ?>
+		<?php echo $form->passwordField($model,'Clave',array('class'=>'form-control','size'=>60,'maxlength'=>60, 'data-parsley-required'=>'true')); ?>
+		<?php echo $form->error($model,'Clave'); ?>
+		
+		<?php echo CHtml::checkBoxList('Interes',"", CHtml::listData(Interes::model()->findAll(), 'idInteres','NombreIntere'), array('class'=>'checkbox-inline'))?>
+
+
+
+		 <?php  echo CHtml::htmlButton('Enviar',array(
+                'onclick'=>'javascript: usuario.CrearUsuario("usuario-form");', // on submit call JS send() function
+                'id'=> 'post-submit-btn', // button id
+                'class'=>'btn btn-success',
+            ));
+    	?>
+	</article>
 
 <?php $this->endWidget(); ?>
 
-</div><!-- form -->
 <style>
   .thumb {
-    height: 150px;
-    width: 200px;
     border: 1px solid #000;
-    margin: 10px 5px 0 0;
+    height: 243px;
+    width: 314px;
   }
 </style>
 <script>

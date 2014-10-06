@@ -12,12 +12,14 @@
  * @property string $Email
  * @property string $Celular
  * @property string $Direccion
+ * @property integer $CategoriaUsuario_idCategoriaUsuario
  * @property integer $Rol_idRol
  * @property string $Usuario
  * @property string $Clave
  *
  * The followings are the available model relations:
  * @property Reserva[] $reservas
+ * @property Categoriausuario $categoriaUsuarioIdCategoriaUsuario
  * @property Rol $rolIdRol
  * @property Usuariointeres[] $usuariointeres
  * @property Vitrina[] $vitrinas
@@ -40,8 +42,8 @@ class Usuario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('Foto, Nombre, Apellido, Email, Celular, Rol_idRol, Usuario, Clave', 'required'),
-			array('Rol_idRol', 'numerical', 'integerOnly'=>true),
+			array('Foto, Nombre, Apellido, Email, Celular, CategoriaUsuario_idCategoriaUsuario, Rol_idRol, Usuario, Clave', 'required'),
+			array('CategoriaUsuario_idCategoriaUsuario, Rol_idRol', 'numerical', 'integerOnly'=>true),
 			array('Foto', 'length', 'max'=>80),
 			array('Nombre, Email', 'length', 'max'=>30),
 			array('Apellido, Direccion', 'length', 'max'=>40),
@@ -51,7 +53,7 @@ class Usuario extends CActiveRecord
 			array('Clave', 'length', 'max'=>60),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idUsuario, Foto, Nombre, Apellido, NombreEmpresa, Email, Celular, Direccion, Rol_idRol, Usuario, Clave', 'safe', 'on'=>'search'),
+			array('idUsuario, Foto, Nombre, Apellido, NombreEmpresa, Email, Celular, Direccion, CategoriaUsuario_idCategoriaUsuario, Rol_idRol, Usuario, Clave', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,6 +66,7 @@ class Usuario extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'reservas' => array(self::HAS_MANY, 'Reserva', 'Usuario_idUsuario'),
+			'categoriaUsuarioIdCategoriaUsuario' => array(self::BELONGS_TO, 'CategoriaUsuario', 'CategoriaUsuario_idCategoriaUsuario'),
 			'rolIdRol' => array(self::BELONGS_TO, 'Rol', 'Rol_idRol'),
 			'usuariointeres' => array(self::HAS_MANY, 'Usuariointeres', 'Usuario_idUsuario'),
 			'vitrinas' => array(self::HAS_MANY, 'Vitrina', 'Usuario_idUsuario'),
@@ -84,7 +87,8 @@ class Usuario extends CActiveRecord
 			'Email' => 'Email',
 			'Celular' => 'Celular',
 			'Direccion' => 'Direccion',
-			'Rol_idRol' => 'Rol Id Rol',
+			'CategoriaUsuario_idCategoriaUsuario' => 'Categoria Usuario',
+			'Rol_idRol' => 'Rol',
 			'Usuario' => 'Usuario',
 			'Clave' => 'Clave',
 		);
@@ -116,6 +120,7 @@ class Usuario extends CActiveRecord
 		$criteria->compare('Email',$this->Email,true);
 		$criteria->compare('Celular',$this->Celular,true);
 		$criteria->compare('Direccion',$this->Direccion,true);
+		$criteria->compare('CategoriaUsuario_idCategoriaUsuario',$this->CategoriaUsuario_idCategoriaUsuario);
 		$criteria->compare('Rol_idRol',$this->Rol_idRol);
 		$criteria->compare('Usuario',$this->Usuario,true);
 		$criteria->compare('Clave',$this->Clave,true);

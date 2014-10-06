@@ -80,7 +80,7 @@
                         <li><a href=""><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/login/logout">Cerrar Sesión</a></li>
+                        <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/index/logout">Cerrar Sesión</a></li>
                     </ul>
                     <!-- /.dropdown-user -->
                 </li>

@@ -1,0 +1,186 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+@font-face{
+	font-family: "NexaBold";
+	src:url(fuentes/NexaBold.otf);
+}
+
+@font-face{
+	font-family: "NexaLight";
+	src:url(fuentes/NexaLight.otf);
+}
+
+html{
+	height: 20%;
+}
+
+body{
+	background: url(../img/office-419965_1280.jpg);
+	background-attachment: fixed;
+}
+
+#contain{
+	/*background-position: 0 px;*/
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.hoja{
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+}
+
+#pre-header{
+	height: 100px;
+}
+
+#pre-header .hoja nav#menu{
+	background-color: #002f7a;
+	left: 70%;
+	padding: 5px;
+	position: relative;
+	top: 70px;
+	width: 120px;
+}
+
+#pre-header .hoja nav#menu a{
+	color: #fff;
+	font-family: "NexaLight";
+	font-size: 12pt;
+	font-weight: 100;
+	left: 32%;
+	position: relative;
+	text-decoration: none;
+}
+
+#pre-header .hoja nav#menu a:hover{
+	color: #92c822;
+}
+
+header{
+	background-color:rgba(255,255,255,0.7); 
+	padding: 20px;
+}
+
+header .hoja figure{
+	margin-left: auto;
+	margin-right: auto;
+	width: 320px; 
+}
+
+section .hoja h2{
+	background-color: #92c822;
+	color:#fff;
+	font-family: "NexaBold";
+	font-size: 14pt;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	padding-top: 8px;
+	padding-bottom: 6px;
+	text-align: center;
+	width: 430px;
+}
+
+section .hoja h3{
+	background-color: #0699d7;
+	color:#fff;
+	font-family: "NexaBold";
+	font-size: 14pt;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	text-align: center;
+	width: 600px;
+}
+
+section .hoja article#imagen h2{
+	background-color: #002f7a;
+	margin: 0;
+	padding-left: 20px;
+	position: relative;
+	text-align: left;
+	width: 295px;
+}
+
+section .hoja article#imagen{
+	background-color: #0699d7;
+	height: 282px;
+	position: relative;
+	top: 30px;
+	left: 250px;
+	width: 316px;
+}
+section .hoja article#imagen input[type="file"]{
+	background-color:  #0699d7;
+}
+
+section .hoja article#imagen #imag{
+	background-color: #002f7a;
+	color: #fff;
+	font-family: "NexaLight";
+	float: right;
+	position: relative;
+	padding: 5px;
+	top: 245px;
+}
+
+section .hoja article#form{
+	bottom: 252px;
+	display: block;
+	float: right;
+	position: relative;
+	right: 250px;
+	width: 316px;
+}
+
+section .hoja article#form input{
+	background-color: #ed7d03;
+	border: none;
+	color: #fff;
+	padding-left: 20px;
+	height: 30px;
+	margin-bottom:7px; 
+	width: 100%;
+}
+
+section .hoja article#form select{
+	background-color: #ed7d03;
+	border: none;
+	color: #fff;
+	padding-left: 20px;
+	height: 30px;
+	margin-bottom:7px; 
+	width: 100%;
+}
+
+section .hoja article#form input::-webkit-input-placeholder {
+	color: #fff;
+}
+
+section .hoja article#form select::-webkit-select-placeholder {
+	color: #fff;
+}
+
+section .hoja article#form input#btn-enviar{
+	background-color: #002f7a;
+	bottom: 8px;
+	float: right;
+	position: relative;
+	width: 200px;
+}
+
+footer{
+	top: 100%;
+	height: 70px;
+	background-color:#b1b2b7; 
+	position: relative;
+	width: 100%;
+}

@@ -133,14 +133,21 @@ class EventoController extends Controller
 				$disabled = "disabled";
 				$ocultaBtnM = false;
 			}
+
+			
+				
+
 			foreach ($iEvento as $value) {
-				$tabla .= "<tr>";
-				$tabla .= "<td>".'<input readonly style="border:0px; background:#ffffff; cursor:default" class="form-control col-xs-2" type="text" name="txtHoraInicio[]" plaseholder="Actividad" value="'.$value["HoraInicio"].'"/>'."</td>";
-				$tabla .= "<td>".'<input readonly style="border:0px; background:#ffffff; cursor:default" class="form-control col-xs-2" type="text" name="txtHoraFinal[]" plaseholder="Actividad" value="'.$value["HoraFinal"].'"/>'."</td>";
-				$tabla .= "<td>".'<input value="'.$value["Actividad"].'" '.$disabled.' class="form-control" type="text" name="txtActividad[]" plaseholder="Actividad" data-parsley-required="true"/>'."</td>";
-				$tabla .= "<td>".'<input value="'.$value["Detalle"].'" '.$disabled.' class="form-control" type="text" name="txtDetalle[]" plaseholder="Detalla" data-parsley-required="true"/>'."</td>";
-				$tabla .= "<td>".CHtml::dropDownList("ddlEstadoEvento[]","",CHtml::listData($evenEst, 'idEstadoEvento', 'NombreEstado'), array('name'=>'ddlEstadoEvento[]', 'empty' => 'Seleccionar', 'class'=>'form-control', 'data-parsley-required'=>'true','disabled'=>$disabled))."</td>";
-				$tabla .= "</tr>";
+				$tabla .= "<div class='[ col-xs-4 col-sm-offset-2 col-sm-4 col-md-4 ]'>";
+				$tabla .= "<ul class='event-list'>";
+				$tabla .= "<li>";
+				$tabla .= "<time datetime='2014-07-20'>";
+				$tabla .= "<span class='day'>".'<input readonly style="border:0px; background:#ffffff; cursor:default" class="form-control col-xs-2" type="text" name="txtHoraInicio[]" plaseholder="Actividad" value="'.$value["HoraInicio"].'"/>'."</span>";
+				$tabla .= "</time>";
+				$tabla .= "<div class='info'><div class='info'><h4 class='title'>Estado</h4>";
+				$tabla .= "<p class='desc'>";
+				$tabla .= CHtml::dropDownList("ddlEstadoEvento[]","",CHtml::listData($evenEst, 'idEstadoEvento', 'NombreEstado'), array('name'=>'ddlEstadoEvento[]', 'empty' => 'Seleccionar', 'class'=>'form-control', 'data-parsley-required'=>'true','disabled'=>$disabled));
+				$tabla .= "</p></div></li></ul></div>";
 			}
 		}else{
 			$ocultaBtnG = true;
@@ -157,15 +164,21 @@ class EventoController extends Controller
 
 				$nuevaHoraV = date("H:i",$segundos_horaInicial+$segundos_minutoAnadir);
 
-				$tabla .= "<tr>";
-				$tabla .= "<td>".'<input readonly style="border:0px; background:#ffffff; cursor:default" class="form-control col-xs-2" type="text" name="txtHoraInicio[]" plaseholder="Actividad" value='.'"'.date("H:i",$segundos_horaInicial).'"'.'/>'."</td>";
-				$tabla .= "<td>".'<input readonly style="border:0px; background:#ffffff; cursor:default" class="form-control col-xs-2" type="text" name="txtHoraFinal[]" plaseholder="Actividad" value='.'"'.$nuevaHoraV.'"'.'/>'."</td>";
-				$tabla .= "<td>".'<input class="form-control" type="text" name="txtActividad[]" plaseholder="Actividad" data-parsley-required="true"/>'."</td>";
-				$tabla .= "<td>".'<input class="form-control" type="text" name="txtDetalle[]" plaseholder="Detalla" data-parsley-required="true"/>'."</td>";
-				$tabla .= "<td>".CHtml::dropDownList("ddlEstadoEvento[]","",CHtml::listData($evenEst, 'idEstadoEvento', 'NombreEstado'), array('name'=>'ddlEstadoEvento[]', 'empty' => 'Seleccionar', 'class'=>'form-control', 'data-parsley-required'=>'true'))."</td>";
-				$tabla .= "</tr>";
+				$tabla .= "<div class='[ col-xs-4 col-sm-offset-2 col-sm-4 col-md-4 ]'>";
+				$tabla .= "<ul class='event-list'>";
+				$tabla .= "<li>";
+				$tabla .= "<time datetime='2014-07-20'>";
+				$tabla .= "<span class='day'>".'<input readonly style="border:0px; background:#ffffff; cursor:default" class="form-control col-xs-2" type="text" name="txtHoraInicio[]" plaseholder="Actividad" value="'.date("H:i",$segundos_horaInicial).'"/>'."</span>";
+				$tabla .= "</time>";
+				$tabla .= "<div class='info'><div class='info'><h4 class='title'>Estado</h4>";
+				$tabla .= "<p class='desc'>";
+				$tabla .= CHtml::dropDownList("ddlEstadoEvento[]","",CHtml::listData($evenEst, 'idEstadoEvento', 'NombreEstado'), array('name'=>'ddlEstadoEvento[]', 'empty' => 'Seleccionar', 'class'=>'form-control', 'data-parsley-required'=>'true'));
+				$tabla .= "</p></div></li></ul></div>";
 				
 			}
+
+
+
 		}
 
 		// renders the view file 'protected/views/site/index.php'

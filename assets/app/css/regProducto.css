@@ -1,0 +1,350 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+@font-face{
+	font-family: "NexaBold";
+	src:url(fuentes/NexaBold.otf);
+}
+
+@font-face{
+	font-family: "NexaLight";
+	src:url(fuentes/NexaLight.otf);
+}
+
+
+/*body{
+	background: url(../img/office-419965_1280.jpg);
+	background-attachment: fixed;
+}*/
+
+#contain{
+	/*background-position: 0 px;*/
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.hoja{
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+}
+
+
+#contain nav#menu{
+	background-color: #ed7d03;
+	height: 135px;
+	padding: 5px;
+	position: relative;
+	top: 70px;
+	width: 100%;
+}
+
+#contain nav#menu img{
+	float: right;
+	position: relative;
+	top: 15px;
+}
+
+#contain nav#menu .hoja a{
+	color: #fff;
+	font-family: "NexaLight";
+	font-size: 12pt;
+	font-weight: 100;
+	left: 50%;
+	margin-left: 15px;
+	margin-right: 15px;
+	position: relative;
+	top: 52px;
+	text-decoration: none;
+}
+
+#contain nav#menu .hoja a:hover{
+	color: #92c822;
+}
+
+section {
+	position: relative;
+	top: 100px;
+	height: 900px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 75%;
+}
+
+section .hoja form{
+}
+
+section .hoja form article#fotos{
+	width: 400px;
+}
+
+section .hoja form article#fotos h2{
+	background-color: #002f7a;
+	color: #fff;
+	font-family: "NexaLight";
+	padding-bottom: 5px;
+	padding-left: 30px;
+	padding-top: 5px;
+	width: 371px;
+
+}
+
+section .hoja form article#fotos figure{
+	background-color: #0699d7;
+	height: 197;
+	width: 100%;
+}
+
+section .hoja form article#fotos input{
+	background-color: #002f7a;
+	color: #fff;
+	left: 20%;
+	padding: 5px;
+	position: relative;
+	width: 80%
+}
+
+ section .hoja form article#descTegno{
+ 	float: right;
+ 	position: relative;
+ 	bottom: 276px;
+	width: 400px;
+ }
+
+ section .hoja form article#descTegno input{
+ 	background-color: #92c822;
+ 	border: none;
+	height: 40px;
+	margin-bottom: 5px;
+	padding-left: 30px;
+	width: 100%;
+ }
+
+section .hoja form article#descTegno input::-webkit-input-placeholder {
+	color: #fff;
+	font-family: "NexaLight";
+	font-size: 18px;
+}
+
+
+  section .hoja form article#descTegno textarea{
+  	background-color: rgba(146,200,34,0.7);
+  	border: none;
+  	bottom: 8px;
+  	color: #fff;
+  	font-family: "NexaLight";
+	height: 195px;
+	padding: 5px;
+	position: relative;
+	width: 100%;
+  }
+
+section .hoja form article#palClave{
+ 	position: relative;
+ 	top:20px;
+	width: 400px;
+ }
+
+ section .hoja form article#palClave input{
+ 	background-color: #92c822;
+ 	border: none;
+	height: 40px;
+	margin-bottom: 5px;
+	padding-left: 30px;
+	width: 100%;
+ }
+
+section .hoja form article#palClave input::-webkit-input-placeholder {
+	color: #fff;
+	font-family: "NexaLight";
+	font-size: 18px;
+}
+
+section .hoja form article#palClave textarea{
+  	background-color: rgba(146,200,34,0.7);
+  	border: none;
+  	bottom: 8px;
+  	color: #fff;
+  	font-family: "NexaLight";
+	height: 100px;
+	padding: 5px;
+	position: relative;
+	width: 100%;
+  }
+
+ section .hoja form article#apliAtri{
+ 	bottom: 127px;
+ 	float: right;
+ 	left: 398px;
+ 	position: relative;
+	width: 400px;
+ }
+
+section .hoja form article#apliAtri input{
+ 	background-color: #92c822;
+ 	border: none;
+	height: 40px;
+	margin-bottom: 5px;
+	padding-left: 30px;
+	width: 100%;
+ }
+
+section .hoja form article#apliAtri input::-webkit-input-placeholder {
+	color: #fff;
+	font-family: "NexaLight";
+	font-size: 18px;
+}
+
+section .hoja form article#apliAtri textarea{
+  	background-color: rgba(146,200,34,0.7);
+  	border: none;
+  	bottom: 8px;
+  	color: #fff;
+  	font-family: "NexaLight";
+	height: 100px;
+	padding: 5px;
+	position: relative;
+	width: 100%;
+  }
+
+
+section .hoja form article#estaDesarrollo{
+ 	height: 100px;
+ 	position: relative;
+ 	top: 30px;
+	width: 400px;
+ }
+
+section .hoja form article#estaDesarrollo input{
+ 	background-color: #92c822;
+ 	bottom: 150px;
+ 	border: none;
+	height: 40px;
+	margin-bottom: 5px;
+	padding-left: 30px;
+	position: relative;
+	width: 100%;
+ }
+
+section .hoja form article#estaDesarrollo input::-webkit-input-placeholder {
+	color: #fff;
+	font-family: "NexaLight";
+	font-size: 18px;
+}
+
+section .hoja form article#estaDesarrollo textarea{
+  	background-color: rgba(146,200,34,0.7);
+  	border: none;
+  	bottom: 155px;
+  	color: #fff;
+  	font-family: "NexaLight";
+	height: 100px;
+	padding: 5px;
+	position: relative;
+	width: 100%;
+  }
+
+section .hoja form article#inComercial{
+ 	bottom: 120px;
+ 	float: right;
+ 	position: relative;
+	width: 400px;
+ }
+
+section .hoja form article#inComercial input{
+ 	background-color: #92c822;
+ 	border: none;
+	height: 40px;
+	margin-bottom: 5px;
+	padding-left: 30px;
+	position: relative;
+	width: 100%;
+ }
+
+section .hoja form article#inComercial input::-webkit-input-placeholder {
+	color: #fff;
+	font-family: "NexaLight";
+	font-size: 18px;
+}
+
+section .hoja form article#inComercial textarea{
+  	background-color: rgba(146,200,34,0.7);
+  	border: none;
+  	bottom: 8px;
+  	color: #fff;
+  	font-family: "NexaLight";
+	height: 100px;
+	padding: 5px;
+	position: relative;
+	width: 100%;
+  }
+
+  section .hoja form article#estPI{
+ 	position: relative;
+ 	top:80px;
+	width: 400px;
+ }
+
+section .hoja form article#estPI input{
+ 	background-color: #92c822;
+ 	border: none;
+ 	bottom: 43px;
+	height: 40px;
+	margin-bottom: 5px;
+	padding-left: 30px;
+	position: relative;
+	width: 100%;
+ }
+
+section .hoja form article#estPI input::-webkit-input-placeholder {
+	color: #fff;
+	font-family: "NexaLight";
+	font-size: 18px;
+}
+
+section .hoja form article#estPI textarea{
+  	background-color: rgba(146,200,34,0.7);
+  	bottom: 48px;
+  	position: relative;
+  	border: none;
+  	color: #fff;
+  	font-family: "NexaLight";
+	height: 100px;
+	width: 100%;
+  }
+
+ section .hoja form #categoria{
+ 	background-color: rgba(146,200,34,0.7);
+  	border: none;
+  	color: #fff;
+  	font-family: "NexaLight";
+  	font-size: 22px;
+	height: 50px;
+	left: 220px;
+	padding-right: 10px;
+	padding-left: 10px;
+	position: relative;
+	top: 50px;
+	width: 180px;
+ }
+
+  section .hoja form #btn-enviar{
+  	background-color: #ed7d03;
+  	border: none;
+  	color: #fff;
+  	font-family: "NexaBold";
+  	left: 140px;
+  	padding-left: 10px;
+  	padding-right: 10px;
+  	padding-bottom: 8px;
+  	padding-top: 8px;
+  	position: relative;
+  	top: 120px;
+  	margin-right: auto;
+  	margin-left: auto;
+  	width: 150px;
+  }
